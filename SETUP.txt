@@ -1,0 +1,30 @@
+Next.JS Setup
+Step 1:
+- npx create-next-app@latest
+
+step 2:
+- project named? ... anyName
+
+step 3:
+- TypeScript? ... Yes
+
+step 4:
+- ESLint? ... Yes
+
+step 5:
+- Tailwind CSS? ... Yes
+
+step 6:
+- src/ directory? ... Yes
+
+step 7:
+- App Router? ... Yes
+
+step 8:
+- import alias? ... no
+
+step 9:
+- cd yourFolderName / code -r yourFolderName
+
+step 10:
+- npm run dev
