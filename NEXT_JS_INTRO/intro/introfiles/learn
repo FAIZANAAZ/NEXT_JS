@@ -1,0 +1,74 @@
+NEXT.js Ke Do Main Concepts
+
+(1)Routing
+(2)Components
+
+////////////****************************************************************************************************************//////////////////$
+
+1. Routing
+Routing = Pages
+
+Jab hum apni website run karte hain, toh pehle tsconfig file read hoti hai. Uske baad src folder mein jo layout.tsx file hoti hai, usay read karta hai, aur phir page.tsx file ko read karke kaam karta hai.
+
+page.tsx******
+
+App ke folder mein jo page.tsx file hoti hai, wo hamara front page hota hai.
+Yeh bana banaya page hota hai jo humein milta hai aur isi ka URL web par localhost:3000 ke name se hota hai.
+Routing ka aik rule hota hai ke jo folder ka naam hota hai, wo route banta hai, yaani URL web ka.
+Jaise index.html ko jab live server par kholta hain, toh uska URL mein index.html likha hota hai. Magar Next.js mein routing folder ke naam par hoti hai.
+
+Routing ke Types
+
+Static Routing********
+
+App ke andar aik folder hota hai, aur uske andar aik page hota hai (tsx file).
+Agar app ke andar 10 folders bhi hon, aur har folder ka apna page.tsx ho, toh yeh static routing hoti hai.
+
+Nested Routing***********
+
+App ke andar aik folder hota hai, jisme aik page.tsx file hoti hai. Is folder ke andar ek aur folder ho aur phir usmein bhi aik page.tsx ho, aur aise 10 nested folders bhi hon bhaly , toh yeh nested routing kehlati hai.
+
+Dynamic Routing
+
+////////////****************************************************************************************************************//////////////////$
+
+2. Components
+Components = Client-side & Server-side
+
+Hum apne components ko page.tsx mein run karte hain.
+Hum kisi component ko self-closing tag mein use kar sakte hain, lekin agar usay pair tag ke andar use karein aur kisi aur component ko bhi uske andar chalayen, toh wo as an argument pass hoga.
+Jis component ko hum pair tag ke andar pass karte hain, usay props ki madad se pakar sakte hain.
+Layout mein jo children likha hota hai, wo bhi props ka aik element hota hai. Agar hum directly props na likhein aur children likh dein, toh bhi chal jata hai.
+
+Props (Parameters)
+
+Props basic taur par aik object hota hai jisme multiple cheezein hoti hain, jaise children, params, etc.
+Jab hum children ko layout mein pakarte hain, toh hum h1 ya kisi aur tag mein use kar sakte hain, kyun ke yeh props ka destructured element hota hai.
+
+**************************************************$ 
+
+Client-side & Server-side Components
+
+Yeh dono components hotay hain, lekin default mein component server-side hota hai. Hum use client-side bana sakte hain.
+
+Client-side Rendering
+
+Yeh browser ke andar hota hai, jaise Google Chrome.or iska kam browser pr nazr ata he node js pr ni ata
+Jab hooks ka use hota hai, toh component ko client-side banana hota hai, kyunki browser hooks ko samajhta hai.
+
+Server-side Rendering
+
+Yeh Node.js ke andar hota hai aur hooks ko nahi samajhta.
+Agar aap use client na likhein, toh component server-side render hoga, aur hooks kaam nahi karenge. Isliye hooks ko samjhane ke liye use client likhna hota hai.or iska kam nodejs me nazr ata he broswer me nhi 
+
+////////////****************************************************************************************************************//////////////////$
+
+Globals.css
+src folder ke andar globals.css jo bhi likha hota hai, wo saare pages par apply hota hai.
+Layout.tsx
+Is file mein jo likha hota hai, wo constant hota hai aur har page mein apply hota hai. Jaise agar footer likha ho, toh wo har page par dikhai dega.
+Children
+Yeh layout.tsx mein likha hota hai aur props ka ek element hota hai. Har component jo layout mein as a child pass hota hai, use children se represent karte hain.
+Link
+Jaise HTML mein hum anchor tag (<a>) ka use karte hain, Next.js mein Link component use karte hain.
+Link ke andar href={"/"} likh kar, home page ka route set kiya jaata hai.

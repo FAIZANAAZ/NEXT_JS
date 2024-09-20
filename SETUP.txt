@@ -24,7 +24,7 @@ step 8:
 - import alias? ... no
 
 step 9:
-- cd yourFolderName / code -r yourFolderName
+ code -r my-app(your folder name)
 
 step 10:
 - npm run dev
