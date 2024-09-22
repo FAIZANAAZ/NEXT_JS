@@ -19,6 +19,8 @@ Jaise index.html ko jab live server par kholta hain, toh uska URL mein index.htm
 
 Routing ke Types
 
+rout jb bhi hm bnay gy static ho nested ho ya koi bhi ho lekin oski file ka name page.tsx hi hoga lazmi
+
 Static Routing********
 
 App ke andar aik folder hota hai, aur uske andar aik page hota hai (tsx file).
@@ -29,6 +31,17 @@ Nested Routing***********
 App ke andar aik folder hota hai, jisme aik page.tsx file hoti hai. Is folder ke andar ek aur folder ho aur phir usmein bhi aik page.tsx ho, aur aise 10 nested folders bhi hon bhaly , toh yeh nested routing kehlati hai.
 
 Dynamic Routing
+     ismy hota ye ke hm ak folder or file bnaty hen or nested ki trha ak or folder or file bnaty hen ander 
+      osky bad lekin folder ko [] me rakhty hen ...jb hm [] me nexted rout bnaty hen to wo dynamic rout bn jata he
+      or ander wali last file me hm koch bhi likh dety hen dynamic ka faidaa ye hota he ke jb hm url ke agy koch bhi 
+      likh den 233 ya abc or enter kr den to wo hmy osi file me dobara le ata he ander wali bhly hm url me koch bhi add 
+      krden wo hmy page not found nhi btayga blky osi page me le ayga nested waly ...
+      lekin  url me static file ka url phly sy add hona chiye or phir hm osky agy koch bhi likh kr add kr skty hen
+      static ka matlb bahir wali file jo component me sbsy phly bany gi 
+      jo hm khod sy koch bhi url me add krty hen wo hmary props ki property me ata he params yani (perameter)me
+    to hm ye kr skty hen hm koch likh den or phir ${params.nested folder ka name} esy krky likh den page me nested waly kisi bhi scentence ke 
+    sath to sy ye hoga ke jb bhi koi urls me add kryga koch  to wo bhi page me likha ayga sath
+    hmary url me static file ka name khlata he( sagment)
 
 ////////////****************************************************************************************************************//////////////////$
 
