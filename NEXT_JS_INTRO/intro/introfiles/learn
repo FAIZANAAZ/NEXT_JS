@@ -31,17 +31,46 @@ Nested Routing***********
 App ke andar aik folder hota hai, jisme aik page.tsx file hoti hai. Is folder ke andar ek aur folder ho aur phir usmein bhi aik page.tsx ho, aur aise 10 nested folders bhi hon bhaly , toh yeh nested routing kehlati hai.
 
 Dynamic Routing
-     ismy hota ye ke hm ak folder or file bnaty hen or nested ki trha ak or folder or file bnaty hen ander 
-      osky bad lekin folder ko [] me rakhty hen ...jb hm [] me nexted rout bnaty hen to wo dynamic rout bn jata he
-      or ander wali last file me hm koch bhi likh dety hen dynamic ka faidaa ye hota he ke jb hm url ke agy koch bhi 
-      likh den 233 ya abc or enter kr den to wo hmy osi file me dobara le ata he ander wali bhly hm url me koch bhi add 
-      krden wo hmy page not found nhi btayga blky osi page me le ayga nested waly ...
-      lekin  url me static file ka url phly sy add hona chiye or phir hm osky agy koch bhi likh kr add kr skty hen
-      static ka matlb bahir wali file jo component me sbsy phly bany gi 
-      jo hm khod sy koch bhi url me add krty hen wo hmary props ki property me ata he params yani (perameter)me
-    to hm ye kr skty hen hm koch likh den or phir ${params.nested folder ka name} esy krky likh den page me nested waly kisi bhi scentence ke 
-    sath to sy ye hoga ke jb bhi koi urls me add kryga koch  to wo bhi page me likha ayga sath
-    hmary url me static file ka name khlata he( sagment)
+Is approach mein hum pehle ek folder aur file banate hain, phir usi folder ke andar ek aur nested folder aur
+file banate hain. Lekin, jo nested folder hota hai, usko hum [] brackets mein rakhte hain. Jab hum [] mein folder
+ya route banate hain, to ye ek dynamic route ban jata hai.
+Dynamic routing ka faida ye hota hai ke jab hum URL (localhost3000/staticfoldername/nestedFolderKaName) ke aage kuch bhi
+ likh dete hain, chahe wo "233" ho ya "abc", (localhost3000/staticfoldername/nestedFolderKaName1232222323232)
+aur enter karte hain, to humein wahi page milta hai nested wla . Bhale hi hum URL me kuch bhi likh 
+den, ye humein page not found ka error nahi dega, balke humein usi nested page pe le ayega.
+Lekin, URL mein static folder+page.tsx ka pehle se hona zaroori hai. Static folder ka matlab hai jo file hum pehle  component 
+mein banate hain. Us static route ke baad hum kuch bhi likh ke daal sakte hain, aur wo URL ke through params
+ (parameters) mein aata hai.
+
+Dynamic Routing Example:
+Jab bhi hum URL me kuch add karte hain, wo values props mein params ke andar aati hain. Hum {params.nestedFolderKaName} 
+ki tarah is dynamic value ko page pe kahi bhi display kar sakte hain.
+Iska faida ye hota hai ke jab bhi koi user URL me kuch type karega, wo value page me nested
+ folder ke kisi bhi sentence ke sath display ho jayegi. Static route ka naam URL ke segment ke tor pe kaam karta hai.
+
+GROUP ROUTHING
+Hum "public" aur "private" routing ko manage karte hain. Is mein, hum app ke folder mein ek "public" aur ek "private"
+ naam ka folder banate hain. In folders ke andar hum (files) pages rakhte hain. Iska faida ye hota hai ke jab hum 
+ localhost:3000 pe jaake kisi folder ka naam likhte hain, jaise "public" ke kisi folder ko  ya "private", ke to Next.js 
+ automatically us folder ka page load kar leta hai. Hume manually (localhost3000/privat/foldername) ye nahi likhna padta 
+ ke "private" ya "public" folder mein jana hai Next.js khud hi privat ko public me jakr folder ka name find krta he or osko
+ lekr ata he esy (localhost3000/foldername)
+
+
+(1)PRIVET ROUTHING
+(2)PUBLIC ROUTHING               
+Private Routing
+        Private routing mein hum kuch files authorize karte hain jo sirf admin access kar sakta
+ hai, ya woh banda jise admin ne explicit permission di ho. Admin decide karta hai ke kaunsi 
+ file sirf uske liye visible hogi aur kaunsi file uske aur uske khaas bandon ke liye bhi dikhayi degi. 
+ Is routing mein, hum sensitive data ko secure rakhte hain aur sirf authorized users ko access dete hain.
+
+Public Routing
+Public routing mein jo bhi content hota hai, wo sab users ke liye accessible hota hai, chahe wo
+ authorized ho ya nahi. Normal users, jo website par aate hain, sab kuch dekh sakte hain. Yani ke ye content 
+ sab ke liye khula hota hai.
+
+
 
 ////////////****************************************************************************************************************//////////////////$
 
