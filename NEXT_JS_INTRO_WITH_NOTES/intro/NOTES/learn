@@ -1,0 +1,180 @@
+NEXT.js Ke Do Main Concepts
+
+(1)Routing
+(2)Components
+
+////////////****************************************************************************************************************//////////////////$
+
+1. Routing
+Routing = Pages
+
+Jab hum apni website run karte hain, toh pehle tsconfig file read hoti hai. Uske baad src folder mein jo layout.tsx file hoti hai,
+ usay read karta hai, aur phir page.tsx file ko read karke kaam karta hai.
+
+page.tsx******
+
+App ke folder mein jo page.tsx file hoti hai, wo hamara front page hota hai.
+Yeh bana banaya page hota hai jo humein milta hai aur isi ka URL web par localhost:3000 ke name se hota hai.
+Routing ka aik rule hota hai ke jo folder ka naam hota hai, wo route banta hai, yaani URL web ka.
+Jaise index.html ko jab live server par kholta hain, toh uska URL mein index.html likha hota hai. Magar Next.js mein routing folder 
+ke naam par hoti hai.
+
+Routing ke Types
+
+rout jb bhi hm bnay gy static ho nested ho ya koi bhi ho lekin oski file ka name page.tsx hi hoga lazmi
+
+Static Routing********
+
+App ke andar aik folder hota hai, aur uske andar aik page hota hai (tsx file).
+Agar app ke andar 10 folders bhi hon, aur har folder ka apna page.tsx ho, toh yeh static routing hoti hai.
+
+Nested Routing***********
+
+App ke andar aik folder hota hai, jisme aik page.tsx file hoti hai. Is folder ke andar ek aur folder ho aur phir usmein bhi aik page.tsx ho, 
+aur aise 10 nested folders bhi hon bhaly , toh yeh nested routing kehlati hai.
+
+Dynamic Routing
+Is approach mein hum pehle ek folder aur file banate hain, phir usi folder ke andar ek aur nested folder aur
+file banate hain. Lekin, jo nested folder hota hai, usko hum [] brackets mein rakhte hain. Jab hum [] mein folder
+ya route banate hain, to ye ek dynamic route ban jata hai.
+Dynamic routing ka faida ye hota hai ke jab hum URL (localhost3000/staticfoldername/) ke aage kuch bhi
+ likh dete hain, chahe wo "233" ho ya "abc", (localhost3000/staticfoldername/1232222323232)
+aur enter karte hain, to humein wahi page milta hai nested wla . Bhale hi hum URL me kuch bhi likh 
+den, ye humein page not found ka error nahi dega, balke humein usi nested page pe le ayega.
+Lekin, URL mein static folder+page.tsx ka pehle se hona zaroori hai. Static folder ka matlab hai jo file hum pehle  component 
+mein banate hain. Us static route ke baad hum kuch bhi likh ke daal sakte hain, aur wo URL ke through params
+ (parameters) mein aata hai.
+
+Dynamic Routing Example:
+Jab bhi hum URL me kuch add karte hain, wo values props mein params ke andar aati hain. lekin params srif dynamic 
+rout me hi work krta he Hum {params.nestedFolderKaName} 
+ki tarah is dynamic value ko page pe kahi bhi display kar sakte hain.
+Iska faida ye hota hai ke jab bhi koi user URL me kuch type karega, wo value page me nested
+ folder ke kisi bhi sentence ke sath display ho jayegi. Static route ka naam URL ke segment ke tor pe kaam karta hai.
+
+GROUP ROUTHING
+Iska maqsad hota hai ke hum alag alag routes banate hain or agr on me bhut sy routs ka aps me link hota he to  Next.js mein routes default tor par alphabetical order mein arrange hote hain. Agar humne 3 routes banaye hain aur unka aapas mein taluq hai, jaise signin, changepassword, aur login pages ka,alphabetically dekha jaye, to yeh alag alag jagah par dikhenge   kyun ke ek 's' se shuru ho raha hai, doosra 'c' se, aur teesra 'l' se. Is wajah se routes aage pichay ho jayenge aur humein unhein dhoondhna mushkil hoga. Is masle ke hal ke liye hum group routing ka istemal karte hain.
+
+Hum ek folder banate hain jisme yeh sab related routes rakhe jate hain, is tarah se routes grouped aur organized ho jate hain.or hm folder (home) round () ke sath bnaty hen tabhi wo group rout mna jata he.
+
+or hmy grout rout ko  URL mein (home) likhne ki zarurat nahi, balke seedha login ya koi bhi andar wali file ka naam likhne par route access ho jata hai.
+
+_PRIVET
+Agar hum folder ka naam _ se shuru karte hain, jaise _home, to wo folder private ho jata hai aur use directly URL mein access nahi kiya ja sakta, chahe folder ka naam sahi bhi ho.
+
+Hum "public" aur "private" routing ko manage karte hain. Is mein, hum app ke folder mein ek "public" aur ek "private"
+ naam ka folder banate hain. In folders ke andar hum (files) pages rakhte hain. Iska faida ye hota hai ke jab hum 
+ localhost:3000 pe jaake kisi folder ka naam likhte hain, jaise "public" ke kisi folder ko  ya "private", ke to Next.js 
+ automatically us folder ka page load kar leta hai. Hume manually (localhost3000/privat/foldername) ye nahi likhna padta 
+ ke "private" ya "public" folder mein jana hai Next.js khud hi privat ko public me jakr folder ka name find krta he or osko
+ lekr ata he esy (localhost3000/foldername)
+
+
+(1)PRIVET ROUTHING
+(2)PUBLIC ROUTHING               
+Private Routing
+        Private routing mein hum kuch files authorize karte hain jo sirf admin access kar sakta
+ hai, ya woh banda jise admin ne explicit permission di ho. Admin decide karta hai ke kaunsi 
+ file sirf uske liye visible hogi aur kaunsi file uske aur uske khaas bandon ke liye bhi dikhayi degi. 
+ Is routing mein, hum sensitive data ko secure rakhte hain aur sirf authorized users ko access dete hain.
+
+Public Routing
+Public routing mein jo bhi content hota hai, wo sab users ke liye accessible hota hai, chahe wo
+ authorized ho ya nahi. Normal users, jo website par aate hain, sab kuch dekh sakte hain. Yani ke ye content 
+ sab ke liye khula hota hai.
+
+ALL SAGMENT ROUTHING
+
+Iska folder hum aise banate hain: [...last]
+
+Isme yeh hota hai ke hum jaise dynamic route banate hain aur / ke baad kuch bhi likh dein, 
+toh wo humein error nahi deta, balke usi page par rakhta hai. Lekin kuch likhne ke baad dobara / 
+laga kar hum kuch likhenge, toh wo error dega. Us error ko hum all segment ki madad se solve karte hain. 
+Yani isme yeh hoga ke hum / likhen, kuch likhen, phir / likh kar kuch aur likhen, kitna bhi likh lein,
+ wo error nahi dega aur usi page mein rakhega..
+
+ Example
+  (localhost3000/staticfoldername/1212/dgdgf/454656/ghghj55/557).
+
+////////////****************************************************************************************************************//////////////////$
+
+2. Components
+Components = Client-side & Server-side
+
+Hum apne components ko page.tsx mein run karte hain.
+Hum kisi component ko self-closing tag mein use kar sakte hain, lekin agar usay pair tag ke andar use karein aur kisi aur component ko 
+bhi uske andar chalayen, toh wo as an argument pass hoga.Jis component ko hum pair tag ke andar pass karte hain, usay props ki madad se
+ pakar sakte hain.Layout mein jo children likha hota hai, wo bhi props ka aik element hota hai. Agar hum directly props na likhein
+ aur children likh dein, toh bhi chal jata hai.
+
+Props (Parameters)
+
+Props basic taur par aik object hota hai jisme multiple cheezein hoti hain, jaise children, params, etc.
+Jab hum children ko layout mein pakarte hain, toh hum h1 ya kisi aur tag mein use kar sakte hain, kyun ke yeh props ka 
+destructured element hota hai.
+
+**************************************************$ 
+
+Client-side & Server-side Components
+
+Yeh dono components hotay hain, lekin default mein component server-side hota hai. Hum use client-side bana sakte hain.
+
+Client-side Rendering
+
+Yeh browser ke andar hota hai, jaise Google Chrome.or iska kam browser pr nazr ata he node js pr ni ata
+Jab hooks ka use hota hai, toh component ko client-side banana hota hai, kyunki browser hooks ko samajhta hai.
+
+Server-side Rendering
+
+Yeh Node.js ke andar hota hai aur hooks ko nahi samajhta.
+Agar aap use client na likhein, toh component server-side render hoga, aur hooks kaam nahi karenge. Isliye hooks ko samjhane ke 
+liye use client likhna hota hai.or iska kam nodejs me nazr ata he broswer me nhi 
+
+////////////****************************************************************************************************************//////////////////$
+
+ERROR PAGE 
+
+Jaise hum kuch ghalat URL likh kar enter karte hain, toh wo humein ek error ka page dikhata hai. Us error page ko hum 
+khud bhi bana sakte hain. Matlab agar koi ghalat URL likhe, toh Next.js wala default error page na aaye, balke humara banaya
+ hua custom error page aaye.
+
+Isko hum aise banayenge ke direct app mein file banayenge not-found.tsx se, aur usme bilkul waise hi component banayenge jaise baaqi
+ components banate hain. Bas h1 mein kuch bhi likh denge, ya jo chaahein wo us page mein likh sakte hain. Jab bhi error aayega, toh wo
+  humare banaye hue page ko show karega.
+
+Iska ek aur tareeqa bhi hota hai ke Next.js ke paas built-in notFound ka function hota hai. Hum agar chahte hain ke yeh error page kisi
+ specific folder ke andar kaam kare, toh hum us folder mein ek not-found.tsx file bana sakte hain. Phir us folder ke page.tsx file mein 
+ jaake notFound function ko import karwaenge, aur phir usko chalayenge ya if-else condition laga denge ke agar koi error ho, toh yeh function
+  chala dena.
+
+Jab yeh function chalega, toh wo us page ko dikhayega jo humne ussi folder ke not-found.tsx file mein banaya hoga. Aur is tareeqe se hum 
+ek not-found.tsx file folder ke andar aur ek app ke andar bhi bana sakte hain. Iska fayda yeh hoga ke jis folder ke andar error aayega,
+ toh us folder ka notFound function chalega. Agar kisi doosre file ya folder mein error aayega, toh app ke andar wali not-found.tsx file 
+ ka function chal jaayega.
+
+Is tareeqe se hum folder-specific aur global-level error handling kar sakte hain.
+
+
+Globals.css
+src folder ke andar globals.css jo bhi likha hota hai, wo saare pages par apply hota hai.
+Layout.tsx
+Is file mein jo likha hota hai, wo constant hota hai aur har page mein apply hota hai. Jaise agar footer likha ho, toh wo har page par
+ dikhai dega.Children Yeh layout.tsx mein likha hota hai aur props ka ek element hota hai. Har component jo layout mein as
+ a child pass hota hai, use children se represent karte hain.
+
+
+
+////////////**********************************************************************************************************
+
+IMAGE
+Next.js mein image ka apna tag use karna hota hai, HTML wala img tag use karne se mana karta hai. Isme hum / dekar URL likhte hain
+ (basic usage). Aur hum picture ko hamesha public ke folder mein rakhenge.
+
+Image tag ko hum self-closing tag ke tor par use karte hain, aur isko import karwana zaroori hota hai. height, width, alt, aur src 
+dena bhi lazmi hota hai.
+
+Height aur width ke liye image ka apna tag hota hai, isme humein CSS ya Tailwind ki zaroorat nahi hoti.
+
+   Link
+   Jaise HTML mein hum anchor tag (<a>) ka use karte hain, Next.js mein Link component use karte hain.
+   Link ke andar href={"/"} likh kar, home page ka route set kiya jaata hai.   

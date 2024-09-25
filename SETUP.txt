@@ -28,3 +28,22 @@ step 9:
 
 step 10:
 - npm run dev
+
+
+//////////////////////////////IMAGE SETTING ///////////////////////////////
+
+add this in next.config.mjs
+
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "*.freepik.com", // Wildcard ka use karain taake subdomains bhi cover hoon
+      },
+    ],
+  },
+};
+
+
+https ke bad host name likha hota he link me
