@@ -164,7 +164,7 @@ Is file mein jo likha hota hai, wo constant hota hai aur har page mein apply hot
 
 
 
-////////////**********************************************************************************************************
+////////////**********************************************************************************************************#$
 
 IMAGE
 Next.js mein image ka apna tag use karna hota hai, HTML wala img tag use karne se mana karta hai. Isme hum / dekar URL likhte hain
@@ -178,3 +178,18 @@ Height aur width ke liye image ka apna tag hota hai, isme humein CSS ya Tailwind
    Link
    Jaise HTML mein hum anchor tag (<a>) ka use karte hain, Next.js mein Link component use karte hain.
    Link ke andar href={"/"} likh kar, home page ka route set kiya jaata hai.   
+
+
+   Layout
+   Hamari layout file mein children ka parameter hota hai jo hamari page.tsx ko run karta hai aur kyun ke woh bilkul 
+   bahar app ke folder mein hota hai, isi liye woh sab page.tsx ki files ko run kar deta hai. Ham chahen toh khud ki 
+   layout ki file bhi bana sakte hain.
+   Magar agar ham kisi route ke andar layout ki file banate hain, toh woh sirf usi route ko chalayegi, baaqi kisi route 
+   par woh kaam nahi karegi.
+   Ham ek kaam zaroor kar sakte hain ke ham 4-8 jitne bhi routes banayein aur unko group route mein rakh dein. Aur andar 
+   walay routes se bahar aur group route ke andar ek layout ki file banayenge, toh woh sab par apply hogi, chahe andar 
+   walay layout mein jitne bhi routes hoon.
+   
+   Layout ki file mein hota hai ek metadata jismein ek title aur ek description hota hai. Description toh humein inspect 
+   karke dikhai deta hai, lekin title woh hota hai jo normal HTML file mein hum title banate hain, toh woh page ka naam 
+   ban jata hai. Isi tarah hum apna layout alag bana kar uske title ko apne page ke hisaab se naam de sakte hain.
