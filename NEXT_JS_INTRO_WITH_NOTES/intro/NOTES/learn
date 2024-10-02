@@ -113,6 +113,19 @@ Props basic taur par aik object hota hai jisme multiple cheezein hoti hain, jais
 Jab hum children ko layout mein pakarte hain, toh hum h1 ya kisi aur tag mein use kar sakte hain, kyun ke yeh props ka 
 destructured element hota hai.
 
+or hm alag argumeny bnay phir alag perameter den phir osko use krty hen to agr zada paremeter hongy jesy 10
+to wo bhut phel jata ko to hm krty ye hen ke hm osko ak data me pass krdety hen object ki sorat me jesy
+
+( arguments) <Hi/ data={{name:faiza ,age:18,city:karachi}}/> esy to hmara code cover ho jayga or {{} do isi liye lagaty hen ak object ka or dosra typescript hm {ismy likhty hen tsx me}}
+
+(perameters) function HI ({props}:any{ data :{name,age,city}}){return <h1>my name is {props.data.name} }
+
+or hm data ko destucture bhi kr skty hen or wo esy hoga ke hm props ki jga data  likh k props ko destructur kr skty hen jesy
+
+(perameters) function HI ({data}:any{ data :{name,age,city}}){return <h1>my name is {data.name} } ab use krty wy props likhny ki need nhi he
+
+
+
 **************************************************$ 
 
 Client-side & Server-side Components
@@ -123,12 +136,13 @@ Client-side Rendering
 
 Yeh browser ke andar hota hai, jaise Google Chrome.or iska kam browser pr nazr ata he node js pr ni ata
 Jab hooks ka use hota hai, toh component ko client-side banana hota hai, kyunki browser hooks ko samajhta hai.
+ismy hm jo bhi kam krty wo foran osko browser pr bhej deta he ke isko chalao or set kro
 
 Server-side Rendering
 
-Yeh Node.js ke andar hota hai aur hooks ko nahi samajhta.
+Yeh Node.js ke andar hota hai aur hooks ko nahi samajhta.or ye ak trha sy code read krny ke kam ata he kioky jb hm khi sy api call kren ya koch bhi to hmy osko bna kr pora phir broswer pr dekhna hoa lekin kioky ke dikhta he node js me to hm phly cheq krlengy ke data aya he ke nhi aya 
 Agar aap use client na likhein, toh component server-side render hoga, aur hooks kaam nahi karenge. Isliye hooks ko samjhane ke 
-liye use client likhna hota hai.or iska kam nodejs me nazr ata he broswer me nhi 
+liye use client likhna hota hai.or iska kam nodejs me nazr ata he broswer me nhi ,ye sara kam khod node js me kr leta he node js me phir broshwer ko bheta he set krky
 
 ////////////****************************************************************************************************************//////////////////$
 
