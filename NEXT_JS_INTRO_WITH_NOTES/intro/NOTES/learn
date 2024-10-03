@@ -207,3 +207,53 @@ Height aur width ke liye image ka apna tag hota hai, isme humein CSS ya Tailwind
    Layout ki file mein hota hai ek metadata jismein ek title aur ek description hota hai. Description toh humein inspect 
    karke dikhai deta hai, lekin title woh hota hai jo normal HTML file mein hum title banate hain, toh woh page ka naam 
    ban jata hai. Isi tarah hum apna layout alag bana kar uske title ko apne page ke hisaab se naam de sakte hain.
+
+   link import 
+  Jab hum apni khud
+    ki banayi hui files ko import karte hain, to hum relative paths ka use karte hain jese @ ,./  ya ../ 
+  . Ye relative paths batate hain ke file kahan se uthani hai.
+   Example
+   import MyComponent from './components/MyComponent';
+
+   Lekin jab hum kisi external library ko import karte hain, jaise React ya Inquirer, 
+   to uska import path thoda different hota hai. Usme relative path (@ ,./  ya ../ ) nahi hota, kyun ke wo already
+    node_modules folder se fetch hota hai, aur hum direct uska naam likhte hain.
+   Example
+   import React from 'react';
+   import inquirer from 'inquirer';
+   
+   to in dono me hm apni bnai wi files ko nichy or inquirer react wali ko hmesha oper rakhty hen
+
+////////////**********************************************************************************************************#$
+
+npm run dev:
+
+Jab aap npm run dev chalate hain, to aapki website development mode mein hoti hai. Iska matlab hai ke aap apni website ko
+ live dekh sakte hain, jahan changes realtime reflect hotay hain. Aap apni website ko developer ke taur par dekh rahe hote
+  hain, aur koi bhi user is version ko directly nahi dekh sakta. Ye sirf local environment ke liye hoti hai jahan aap asani
+ se testing aur development kar sakte hain Development mode mein, tools jese hot reloading aur debugging ki madad hoti hai
+ jo aapko asani se changes check karne aur problems ko solve karne mein madad dete hain.
+
+npm run build:
+
+Jab aap npm run build chalate hain, to aapki website production mode mein convert hoti hai. Iska matlab hai ke aapka code 
+optimize ho jata hai aur deploy karne ke liye ready hota hai.Is build ko aap server ya kisi hosting platform par dal kar 
+live kar sakte hain, npm run build se aapki 
+website ka final version banta hai, jahan sari cheezain compress aur optimize ho chuki hoti hain taake website fast aur
+efficient chale.lekin ye user ko dikhti nhi he blky ye hm as a user dekhry hoty hen
+
+npm run start
+Isay hum tab use karte hain jab sab kuch ho jata hai, aur npm run build se bhi dekh liya hota hai. 
+Ab publish karna ya deploy karna hota hai, to hum npm run start chalate hain. Ye command chalane se website user ke 
+liye Google par a jati hai, aur user ab URL dal kar search bhi kar sakta hai.
+
+Errors in npm run dev vs npm run build:
+
+Kuch errors aise hotay hain jo npm run dev mein show nahi hotay kyunke development mode mein kuch features relaxed hote hain.
+Lekin jab aap npm run build chalate hain, to stricter checks hote hain, jisme aapko optimization aur code errors dekhne 
+ko mil sakte hain. Ye errors production mode mein fix karna zaroori hota hai taake live version mein koi issues na aayein.
+
+Deployment: 
+Jab sab kuch sahi ho jata hai, to aap apni website ko deploy karte hain. Deployment ka matlab hai ke aap apne build 
+files ko kisi hosting service (jaise ke Netlify, Vercel, GitHub Pages, Heroku, ya AWS) par upload karte hain. Isse aapki
+ website live ho jati hai, aur koi bhi user internet par isko access kar sakta hai.
