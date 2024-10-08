@@ -257,3 +257,32 @@ Deployment:
 Jab sab kuch sahi ho jata hai, to aap apni website ko deploy karte hain. Deployment ka matlab hai ke aap apne build 
 files ko kisi hosting service (jaise ke Netlify, Vercel, GitHub Pages, Heroku, ya AWS) par upload karte hain. Isse aapki
  website live ho jati hai, aur koi bhi user internet par isko access kar sakta hai.
+
+
+////////////**********************************************************************************************************#$
+LOOPING
+    looping matlb normal wala loop jo typecript me kisi chiz ko bar bar chalany ke liye kam  ata he esy hi hm html me bhi use kr skty hen yani tsx me 
+example
+    kisi component me ak array bnaya 
+let array = ["apple","mango","orange"]
+phir return me onclick ya kisi pr bhi koi code likh liya ya phir kisi compenent ko bar bar call krwana he to bhi 
+return(
+<button>{array.map()=>{
+
+    <hello key={indx}/>}
+
+}<button>
+
+ab ye component 3 bar call hoga or iska index number 0 1 2 hoga 
+
+lekin broswer thora confuse ho jata he ke ye sb same hen to ismy difference ke liye hm likhty hen key=indx ke 
+index wo wala jo by default map me hota he or osmy index number aty he to broswer me jb sb ke index number different ay gy to wo 
+confused nhi hoga
+)
+
+////////////**********************************************************************************************************#$
+
+CONDITION RENDERING
+Iska matlab yeh hota hai ke hum kisi condition (jaise if-else ya ternary operator) ko HTML me direct className ya attributes ke andar use kar sakte hain. Matlab, agar koi condition true ho, to ek class apply hogi (css jesy bg-red :bg-blue), aur agar false ho to doosri class apply hogi. Is tarah ke techniques ko hum TypeScript ke sath bhi implement kar sakte hain jab hum React ya kisi frontend framework ka istemal karte hain.
+
+
