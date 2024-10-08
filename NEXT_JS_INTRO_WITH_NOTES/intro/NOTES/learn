@@ -140,9 +140,49 @@ ismy hm jo bhi kam krty wo foran osko browser pr bhej deta he ke isko chalao or 
 
 Server-side Rendering
 
-Yeh Node.js ke andar hota hai aur hooks ko nahi samajhta.or ye ak trha sy code read krny ke kam ata he kioky jb hm khi sy api call kren ya koch bhi to hmy osko bna kr pora phir broswer pr dekhna hoa lekin kioky ke dikhta he node js me to hm phly cheq krlengy ke data aya he ke nhi aya 
+Yeh Node.js ke andar hota hai aur hooks ko nahi samajhta.or ye ak trha sy code read krny ke kam ata he kioky jb hm khi sy api call kren
+ ya koch bhi to hmy osko bna kr pora phir broswer pr dekhna hoa lekin kioky ke dikhta he node js me to hm phly cheq krlengy ke data aya he ke nhi aya 
 Agar aap use client na likhein, toh component server-side render hoga, aur hooks kaam nahi karenge. Isliye hooks ko samjhane ke 
-liye use client likhna hota hai.or iska kam nodejs me nazr ata he broswer me nhi ,ye sara kam khod node js me kr leta he node js me phir broshwer ko bheta he set krky
+liye use client likhna hota hai.or iska kam nodejs me nazr ata he broswer me nhi ,ye sara kam khod node js me kr leta he node js me phir
+broshwer ko bheta he set krky
+
+Two type of Server-side Rendering
+(1)Static Rendering
+(2)Dynamic Rendering
+
+(1) Static Rendering
+Yeh woh code hota hai jo aik dafa create ho jata hai aur phir usmein koi change nahi hoti, jaisay static route ke zariye hum routing karte hain.
+Ismein koi bhi dynamic changes nahi hoti hain, is liye isay static rendering kehte hain.
+
+Kyunkay yeh server-side pe hoti hai, to humein browser pe tab tak nahi dikhti jab tak hum isay page.tsx mein run na karein. Aur Node.js (terminal)
+ mein bhi tab tak nahi dikhta jab tak hum static route ko browser mein open na karein, jaisay localhost:3000/staticfoldername.
+
+Static rendering mein hota yeh hai ke jab browser isay pehli dafa run karta hai, to thoda waqt lagta hai kyunkay browser pehli dafa code ko
+ generate kar raha hota hai. Jaisay agar tum localhost:3000/staticfoldername likho aur pehli dafa run karo, to thoda time lagega code banne mein
+ . Lekin ek dafa code generate ho gaya, to dobara jab tum localhost:3000/staticfoldername likho ge, to yeh foran load ho jaye ga bina waqt liye.
+  Yani browser aik dafa code ko create karke apne paas save kar leta hai aur phir dobara create nahi karta.
+
+isi trha agr hm node me dekhengy koch console krky or /staticfoldername likhengy bar bar browser pr to wo terminal me ak hi bar console print kryga
+dosri bar wo kryga hi nhi kioky wo create hi nhi hoga  
+
+(2) Dynamic Rendering
+Dynamic rendering ka matlab hota hai ke code jo har dafa change hota hai, yani user jb hmy khy ke mojhe shoes dikhao or osky price phly 10 thy
+ab 20 hen to broswer 20 wala ubdate shoes osko dikhayga yani changing hoi na phly 10 tha ab 20 howa isy hooks ka koi link nhi 
+
+Dynamic Rendering Server-Side pe kaise kaam karta hai?
+
+Dynamic rendering ka matlab yeh hai ke jab user request karta hai, to server har dafa naya content ya updated content generate karta hai,
+depending on the request. Yani, har request ke liye server ne naye se naye data ko fetch karna hota hai ya nayi logic run karni hoti hai.
+Ismein changes ho sakti hain, lekin wo server pe hoti hain, client-side pe nahi.
+
+Dynamic rendering mein har dafa jab tum browser pe run karte ho ya kisi link pe click karte ho, jaisay localhost:3000/staticfoldername/dynamicfoldername, 
+to browser us code ko bar bar create karta hai. Browser usay apne paas save nahi karta, is liye har dafa thoda waqt lagta hai jab bhi tum usay 
+chalao ge.
+
+isi trha agr hm console me koch likh kr terminal me dekhengy to hm /dynamicfoldername jistni bar mita agr dobara likhengy ya alag alag link pr 
+click krengy to wo console print kr ky bhi dikhayga kioky ye har bar creat hoga
+          
+
 
 ////////////****************************************************************************************************************//////////////////$
 
