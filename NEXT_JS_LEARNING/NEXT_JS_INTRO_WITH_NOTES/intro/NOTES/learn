@@ -181,6 +181,59 @@ chalao ge.
 
 isi trha agr hm console me koch likh kr terminal me dekhengy to hm /dynamicfoldername jistni bar mita agr dobara likhengy ya alag alag link pr 
 click krengy to wo console print kr ky bhi dikhayga kioky ye har bar creat hoga
+
+*** STATIC RANDERING WITH NPM RUN BUILD ****
+ ismy ye hota he ke static npm run krny ke bad srif ak bar chalata he or render krta he or osky bad rende nhi krta lekin 
+ npm build me bhi wo ak hi bar chala tha lekin buid krty time wo render krky apny pas rakh leta he or jb hm npm run start 
+ krty hen to wo hmy osky bad hm npm start krty hen to wo render howa wa hmy dikhata he bar bar 
+ 
+ Lekin static content ka matlab yeh hota hai ke woh data kabhi change nahi hota. Agar koi API call ki jaye jo har dafa 
+ refresh par naya data laati ho (jaise tumne TypeScript mein questions wali API use ki thi), toh woh static nahi rahega.
+  Yeh dynamic rendering ka case ban jata hai, kyun ke data har request pe update ho raha hota hai.
+ 
+ Cache Policies
+ Yeh policies browser ya server ke data storing aur fetching mechanism ko manage karti hain. Kuch important caching 
+ policies hain:
+ 
+ (1) default / force-cache
+ Yeh dono almost ek hi jaise hain. Jab hum {cache: 'default'} ya {cache: 'force-cache'} set karte hain aur npm run dev chalate hain, 
+ toh browser ya server pehle se cached data hi show karega.Agar API ka data update bhi ho, tab bhi yeh pehle render kiya 
+ hua data hi baar baar dikhayega, jab tak manually refresh ya re-render na kiya jaye.Yeh behavior static rendering ke
+  concept ke kareeb hota hai, jahan ek hi dafa render ke baad content change nahi hota.
+ (2) no-cache
+ Iska matlab yeh hota hai ke build ke waqt jo data cache mein store ho raha hai, woh future requests mein use nahi hoga. Har refresh pe naya data fetch hoga.
+ Yeh static data ko dynamically chalane ka ek tareeqa hai. Browser pehli dafa purana data cache kar leta hai, magar har refresh par fresh data render karta hai.
+ Use Case Example: Kuch websites ko har dafa new data dikhana hota hai, lekin woh sensitive data bhi store karti hain. Jaise kisi hospital ke patient records me 
+ sirf naam dikhaye jaate hain, lekin illness ya sensitive details hide hoti hain. Har bar refresh par updated records fetch kiye jaate hain.
+ (3) no-store
+ Yeh policy kehati hai ke koi data cache mein store hi nahi hoga. Har request par nayi API call hogi, aur jo bhi data aaye, wohi show hoga.
+ Static content ko dynamically render karne ka yeh ek mechanism hai, jahan purana data bilkul bhi store nahi hota aur har refresh pe latest data hi fetch hota hai.
+ Use Case of no-store:
+ Kuch users ko apni websites pe data store karne ka option nahi chahiye hota, kyun ke unka data highly sensitive hota hai. Jaise agar koi website hacker ka target ban
+  jaye aur cached data ko access kar le, toh sensitive information leak ho sakti hai.
+ Is wajah se, kuch cases mein no-store policy use ki jaati hai, jahan har bar new data fetch hota hai aur kuch bhi store nahi hota.
+ 
+ Summary:
+ default / force-cache: Pehle se store kiya hua data hi show karein, chaahe API update ho ya na ho.
+ no-cache: Build ke waqt store kiya data use ho sakta hai, lekin har refresh pe naya data fetch hoga.
+ no-store: Koi bhi data store nahi hota; har bar nayi request aur naya data render hota hai.
+
+ ****Next Revalidate Explanation****
+(ye jo api di he ye spcial api he har bar apna dta ye chang krti he refresh hony pr)
+
+let apidata = await fetch("https://fakerapi.it/api/v1/persons?_locale=en_US&_quantity=1", { 
+  next: { revalidate: 3 } 
+});
+let res = await apidata.json();
+Is code me next.revalidate ek special property hai jo API call ka behavior control karti hai. Iska kaam time-based revalidation karna hai, matlab hum API ko ek specific time dete hain jisme wo data update kare.
+
+Agar hum 3 seconds ka time de rahe hain (revalidate: 3), toh pehle 3 seconds tak API ka purana data hi dikhaya jayega, chaahe hum kitni dafa refresh karein.
+3 seconds ke baad, agar API ka data change ho gaya ho, tab wo naya data fetch aur render karegi.
+Matlab agar API har baar naya data provide kar rahi ho, tab bhi humare diye gaye time se pehle data change nahi hoga. Hum refresh karte rahein, lekin 3 seconds ke andar purana data hi dikhayi dega.
+Summary:
+Revalidation time ka matlab hai ke data ek fixed interval (yahan 3 seconds) ke liye static rahega.
+Is period ke dauran refresh karne par bhi data update nahi hoga.
+Time complete hone ke baad hi API se naya data fetch kiya jayega aur render hoga.
           
 
 
