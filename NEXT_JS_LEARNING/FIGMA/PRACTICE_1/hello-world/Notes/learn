@@ -21,3 +21,76 @@ SHORT_KEYS
 2 . v = move 
 
 agr ak chiz move krwany sy dosri chiz mov hori he to dosri wali ko lock krdo
+
+
+/////////////////////////////////
+
+alt ke sath mouse pkar kr hm copy krty hen
+
+/////////////////////////////////
+TYPOGRAPHY 
+ismy sb text ki chizen hoti hen
+
+/////////////////////////////////
+THREE TYPES OF text center
+
+(1)
+   text ko select krky alingh krna 
+(2) select fram and go layout click last icone (outo layout )
+   isy wo fram otna ho jayga jitna text he phir hm osy padding de kr set krdengy
+
+(3)red line by default wali osky zariye
+
+/////////////////////////////////
+fram ko color krny ke liye fill option ko open  krna hoga
+
+
+/////////////////////////////////
+for shade to man color 
+      use chat gpt or osko apny main color ko fil sy jakr copy krengy  or phir osy # ke sath de dengy or bolengy (give me 6 ligher shades of this color #63e3d6)
+
+/////////////////////////////////
+fill ko open krky + pr click krky hm kr skty hen kisi color ko save or name bhi de skty hen
+
+/////////////////////////////////
+for view spacing
+hm jb 2 groups ko ya do chizon ko select krengy ak sath to wo khod bta dega 
+ 
+/////////////////////////////////
+tyde up
+position me jakr 3 . pr jakr tyde up krengy to oska size otna ho jayga fram ka jitna content ya text hoga
+/////////////////////////////////
+TEXT CASE
+typograpgy me jakr oper nichy ak eror ki trha hoga ospr click krky later case sy handele krengy
+/////////////////////////////////
+PLUGING => CONTENT REEL => TEXT  => FOR LOREM 
+PLUGING => MATERIAL DESIGN ICOM => FOR ICONS
+/////////////////////////////////
+FOR ICONS COLORS 
+ koch icons ya koi bhi picture normal color ho jati he agr koc chizen apna color chang na kren to hm krengy ye 
+ select => squre=> phir squre ko os icon ke open rakh kr icon ko chopa dengy phir => squre or icon ko shift ssy ak sath click krengy => 
+ right side sy sb sy oper waly 3 ... pr click krengy or use as mask kr dengy
+
+/////////////////////////////////
+CREAT COMPONENT for hover
+phly braber me ak fram bna kr osmy wo chiz copy past krengy jispr hover wagera krn he phir copy waly ko select krengy
+phir right side pr top pr fram ke braber me phol jesy icon pr mouse rkhegy to likha ayga creat compoenet
+ or pta esy chalyga ke ye component bn gya he jo chiz hmny copy ki he ospr wo icon bna a jayga osky name pr
+
+ phir osi ke braber waly right top pr hi icon ko click krengy ospy likha ayga(add varient) 
+ isy ye hoga ke ak or copy bn kr a jaygi
+
+ phir jo copy nikli he ospr click krky property pr jakr name chang krengy varient2 ke bjay wo name dengy jo applay krengy jesy hover
+
+ oe phir ospr click krengy to khod + ka sign ayga yani or bhi kitny hi varient hm bna skty hen
+/////////////////////////////////
+
+
+
+
+
+
+overflow and crollable
+
+fram sy bahir krn=rengy chizon ko or phir layout sy clip sy cheq hta dengy 
+select fram wo wala siko chalana he phir => prototype => scrol behavior => horisontal 
