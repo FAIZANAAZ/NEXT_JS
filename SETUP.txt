@@ -1,6 +1,6 @@
 Next.JS Setup
 Step 1:
-- npx create-next-app@latest
+- i
 
 
 step 2:

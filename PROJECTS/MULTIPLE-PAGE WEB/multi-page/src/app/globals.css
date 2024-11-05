@@ -10,11 +10,13 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f2f5;
-    padding-right: 20px;
+    background-color:white;
+  
 
 }
 
-html{
-    font-size: 1px;
-}
+/* styles.module.css */
+.shadoww{
+    box-shadow: 0 0 25px 10px #f9861f; /* Dark shadow */
+  }
+  
