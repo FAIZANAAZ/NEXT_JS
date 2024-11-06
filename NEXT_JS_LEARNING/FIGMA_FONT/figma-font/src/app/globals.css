@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  font-size: 30px;
+  height: 100vh;
+  background:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+

@@ -379,3 +379,9 @@ CONDITION RENDERING
 Iska matlab yeh hota hai ke hum kisi condition (jaise if-else ya ternary operator) ko HTML me direct className ya attributes ke andar use kar sakte hain. Matlab, agar koi condition true ho, to ek class apply hogi (css jesy bg-red :bg-blue), aur agar false ho to doosri class apply hogi. Is tarah ke techniques ko hum TypeScript ke sath bhi implement kar sakte hain jab hum React ya kisi frontend framework ka istemal karte hain.
 
 
+////////////**********************************************************************************************************#$
+
+agr hm ander folder ke ander khod sy koi css file bnaty hen nextjs me specific folder ke liye sbki alag alag taky mix na ho to hm class nmae esy dety hen
+className={styles.abc}
+agr ak sy zaa classes honto
+className={`${styles.abc} className={styles.123}`}

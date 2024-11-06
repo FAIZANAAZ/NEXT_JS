@@ -3,6 +3,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ImMenu } from "react-icons/im";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import Sec2 from "@/Components/Aboutus/sec2";
+
 
 const Nav = () => {
   const [menu, setMenu] = useState(false);
@@ -14,46 +17,47 @@ const Nav = () => {
   return (
     <>
       <nav className="absolute top-0  w-full flex justify-between items-center p-4 ">
-        <div className="flex items-center ml-[20px]">
+        <div className=" flex items-center ml-[5px] sm:ml-[20px]">
           <Image
             src={"/giftlog-removebg-preview.png"}
             width={200}
             height={200}
             alt="Gift logo"
-            className="sm:w-[100px] sm:h-[100px] h-[50px] w-[50px]"
+            className=" sm:w-[100px] sm:h-[100px] h-[50px] w-[50px]"
           />
         </div>
         <div className="sm:flex lg:space-x-[80px] text-black lg:font-semibold lg:text-[25px] md:space-x-[30px] md:text-[20px] md:font-[600] sm:space-x-[30px] sm:text-[20px] sm:font-[600] absolute right-[50px] hidden">
-          <a
+          <Link
             href="#"
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
           >
             Home
-          </a>
-          <a
-            href="#"
+          </Link>
+         
+          <Link
+            href="@Components/Aboutus"
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
           >
             Our gifts
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/Aboutus/sec2"
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
           >
             Shop
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
 
         <div className="flex flex-col justify-center items-end">
@@ -81,36 +85,38 @@ const Nav = () => {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <a
+            <Link
               href="#"
               className=" hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
             >
               Home
-            </a>
-            <a
+            </Link>
+
+            <Link
               href="#"
               className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
             >
               Our gifts
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
             >
               Shop
-            </a>
-            <a
+            </Link>
+
+            <Link
               href="#"
               className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
             >
               Contact Us
-            </a>
+            </Link>
           </motion.div>
         ) : (
           <div
@@ -118,36 +124,36 @@ const Nav = () => {
               "hidden absolute top-[50px] right-[0px] flex flex-col space-y-[10px] text-center font-bold  h-[250px] w-[120px] bg-white text-[22px]  sm:hidden "
             }
           >
-            <a
+            <Link
               href="#"
               className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
             >
               Our gifts
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
             >
               Shop
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         )}
       </AnimatePresence>
