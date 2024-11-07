@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Sec2 from "@/Components/Aboutus/sec2";
+import Contact from "../Contact/contact";
+
 
 
 const Nav = () => {
@@ -16,7 +18,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="absolute top-0  w-full flex justify-between items-center p-4 ">
+      <nav className="sticky z-0 top-0  w-full flex justify-between items-center px-4 bg-gradient-to-r from-yellow-300 to-white ">
         <div className=" flex items-center ml-[5px] sm:ml-[20px]">
           <Image
             src={"/giftlog-removebg-preview.png"}
@@ -26,7 +28,7 @@ const Nav = () => {
             className=" sm:w-[100px] sm:h-[100px] h-[50px] w-[50px]"
           />
         </div>
-        <div className="sm:flex lg:space-x-[80px] text-black lg:font-semibold lg:text-[25px] md:space-x-[30px] md:text-[20px] md:font-[600] sm:space-x-[30px] sm:text-[20px] sm:font-[600] absolute right-[50px] hidden">
+        <div className="sm:flex lg:space-x-[80px] text-black lg:font-semibold lg:text-[25px] md:space-x-[30px] md:text-[20px] md:font-[600] sm:space-x-[30px] sm:text-[18px] sm:font-[500] absolute right-[50px] hidden">
           <Link
             href="#"
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
@@ -53,11 +55,17 @@ const Nav = () => {
             Shop
           </Link>
           <Link
-            href="#"
+            href={"/Contact/contact"}
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
           >
             Contact Us
           </Link>
+          <Link
+              href={"./Product"}
+              className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
+            >
+             Products
+            </Link>
         </div>
 
         <div className="flex flex-col justify-center items-end">
@@ -117,6 +125,12 @@ const Nav = () => {
             >
               Contact Us
             </Link>
+            <Link
+              href="#"
+              className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
+            >
+             Products
+            </Link>
           </motion.div>
         ) : (
           <div
@@ -153,6 +167,13 @@ const Nav = () => {
               className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
             >
               Contact Us
+            </Link>
+
+            <Link
+              href="#"
+              className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
+            >
+              Products
             </Link>
           </div>
         )}

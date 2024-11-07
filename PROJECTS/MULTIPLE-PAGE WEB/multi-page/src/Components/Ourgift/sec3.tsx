@@ -15,25 +15,25 @@ const Sec3 = () => {
   
   <div className="  flex flex-wrap justify-center space-x-0 sm:space-x-4 lg:space-x-8 py-4 md:py-8">
     <div className=" sm:w-[35%] md:w-[40%] lg:w-[400px] bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center items-center mb-4 sm:mb-0">
-      <Image src={"/sec3.jpg"} alt={"A small cactus in a turquoise pot"} width={400} height={400} className="object-cover w-full h-full"/>
-      <div className="p-4 text-center bg-black text-white w-full">
-        <h2 className="text-lg md:text-xl font-bold">
+      <Image src={"/sec3 (1).jpg"} alt={"A small cactus in a turquoise pot"} width={400} height={400} className="object-cover w-full h-full"/>
+      <div className="p-4 text-center bg-black hover:bg-yellow-200 hover:text-black cursor-pointer text-white w-full">
+        <h2 className="text-lg md:text-xl  font-bold">
           View more
         </h2>
         <p className="mt-2 text-xs md:text-sm">
-          These are the best girls' gift collections, with all varieties
+          These are the best  gift collections, with all varieties
         </p>
       </div>
     </div>
 
     <div className="sm:w-[35%]  md:w-[40%] lg:w-[400px] bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-center items-center mb-4 sm:mb-0">
-      <Image src={"/sec3-3.jpg"} alt={"A small cactus in a turquoise pot"} width={400} height={400} className="object-cover w-full h-full"/>
-      <div className="p-4 text-center bg-black text-white w-full">
-        <h2 className="text-lg md:text-xl font-bold">
+      <Image src={"/sec3-2 (2).jpg"} alt={"A small cactus in a turquoise pot"} width={400} height={400} className="object-cover w-full h-full"/>
+      <div className="p-4 text-center bg-black hover:bg-yellow-200 cursor-pointer hover:text-black text-white w-full">
+        <h2 className="text-lg md:text-xl  font-bold">
           View more
         </h2>
         <p className="mt-2 text-xs md:text-sm">
-          These are the best boys' gift collections, with all varieties
+          These are the best  gift collections, with all varieties
         </p>
       </div>
     </div>

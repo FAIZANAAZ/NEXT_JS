@@ -5,15 +5,15 @@ import { MdOutlineEmail } from 'react-icons/md'
 const Contact = () => {
   return (
     <>
-      <section className="flex flex-col md:flex-row mt-[170px] sm:mt-[150px] md:h-[30rem]">
+      <section className="flex flex-col md:flex-row mt-[170px] sm:mt-[150px] md:mt-0 md:h-[30rem]">
 
         <div className="w-full md:w-1/3 bg-gradient-to-b from-yellow-300 to-orange-500 flex flex-col justify-center items-center p-4 md:p-6 lg:p-8">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 md:mb-6">Contact Us</h1>
-          <a className="bg-white text-black text-center font-bold py-4 px-[50px]  mb-4 w-full md:w-auto flex">
+          <a className="bg-white text-black text-center font-bold p-3  mb-4 w-full md:w-auto flex">
           Phone <BsTelephoneFill size={20}/> : +92 123 456 789
           </a>
-          <a className="bg-black text-center text-white font-bold py-4 px-[50px] flex w-full md:w-auto">
-          Email <MdOutlineEmail size={20}/> : gift@naaz.com
+          <a className="bg-black text-center text-white font-bold p-3  flex w-full md:w-auto">
+          Email <MdOutlineEmail size={20}/> : giftnaaz@gmail.com
           </a>
         </div>
 

@@ -14,7 +14,7 @@ const Footer = () => {
                 <p className="mb-2"><i className="fas fa-map-marker-alt"></i> Address : No 40 Baria Street 133/2, NewYork, USA.</p>
                 <p className="mb-2 flex"> Phone<BsTelephoneFill size={20}/>
                 : +92 123 456 789</p>
-                <p className="mb-2 flex">Email <MdOutlineEmail size={20}/>: gift@naaz.com</p>
+                <p className="mb-2 flex">Email <MdOutlineEmail size={20}/>: giftnaaz@gmail.com</p>
                 <div className="flex mt-4">
                     <input type="email" placeholder="Enter your email" className="p-2 rounded-l-md text-black w-full" />
                     <button className="bg-blue-500 p-2 rounded-r-md">Subscribe</button>

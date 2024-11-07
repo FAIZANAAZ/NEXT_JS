@@ -1,0 +1,30 @@
+.swiper-container {
+  margin-top: 60px; /* Adjust this according to your header height */
+  z-index: 0; /* Ensure Swiper stays behind header */
+}
+
+.swiper {
+  width: 100%;
+  height: calc(80vh - 60px); /* Adjust for header height */
+}
+
+.swiper-slide {
+  text-align: center;
+  background: #d32d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .myswiperscontainer {
+    display: block;
+  }
+}
+
+/* For small screens (below 640px) */
+@media (max-width: 639px) {
+  .myswiperscontainer {
+    display: none;
+  }
+}

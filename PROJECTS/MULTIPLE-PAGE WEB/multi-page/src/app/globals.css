@@ -11,9 +11,12 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color:white;
+    display: flex; 
+    flex-direction: column;
   
 
 }
+
 
 /* styles.module.css */
 .shadoww{
@@ -61,3 +64,4 @@ body{
     }
   }
   
+ 
