@@ -1,9 +1,9 @@
 
-import Front from "../Components/frontpage/front";
-import Sec4 from "@/Components/Ourshop/sec4";
-import Contact from "@/Components/Contact/contact";
-import Sec2 from "@/Components/Aboutus/sec2";
-import Sec3 from "@/Components/Ourgift/sec3";
+import Front from "../Components/frontpage/page";
+import Sec4 from "@/Components/Ourshop/page";
+import Contact from "@/Components/Contact/page";
+import Sec2 from "@/Components/Aboutus/page";
+import Sec3 from "@/Components/Ourgift/page";
 
 
 

@@ -1,52 +1,52 @@
-export const data  =[
+export const data :any =[
     {
-     picture:"",
+     picture:"/sec1-1.jpg",
      price :"10$" ,
      name:"Delicious Dates Box"  
     },
     {
-        picture:"",
+        picture:"/sec1-2.jpg",
         price :"13$" ,
         name:"Ramadan Mubarak Delights"  
        },
        {
-        picture:"",
+        picture:"/sec1-3.jpg",
         price :"16$" ,
         name:"Filled Dates With Chocolate"  
        },
        {
-        picture:"",
+        picture:"/sec1-4.jpg",
         price :"14$" ,
         name:"Islamic Precious Box"  
        },
        {
-        picture:"",
+        picture:"/sec1-5.jpg",
         price :"16$" ,
         name:"Chocolate Date Delight"  
        },
        {
-        picture:"",
+        picture:"/sec1-6.jpg",
         price :"18$" ,
         name:"Zam Zam Dates"  
        },
      
        {
-        picture:"",
+        picture:"/sec1-7.jpg",
         price :"15$" ,
         name:"Mix Dry Fruit Box"  
        },
        {
-        picture:"",
+        picture:"/sec1-8.jpg",
         price :"5$" ,
         name:"Dates Delight Pack"  
        },
        {
-        picture:"",
+        picture:"/sec1-9.jpg",
         price :"10$" ,
         name:"Dreamy Ramadan Gift"  
        },
        {
-        picture:"",
+        picture:"/sec1-10.jpg",
         price :"17$" ,
         name:"Ramadan Kareem Basket"  
        },
@@ -54,105 +54,105 @@ export const data  =[
 
 
        {
-           picture:"",
+           picture:"/sec2-1.jpg",
            price :"13$" ,
            name:"Sweet & Chocolate Love"  
           },
           {
-           picture:"",
+           picture:"/sec2-2.jpg",
            price :"16$" ,
            name:"sweet combo "  
           },
           {
-           picture:"",
+           picture:"/sec2-3.jpg",
            price :"14$" ,
-           name:"teady in bowl"  
+           name:"teddy in bowl"  
           },
           {
-           picture:"",
+           picture:"/sec2-4.jpg",
            price :"16$" ,
            name:"Red teddy"  
           },
           {
-           picture:"",
+           picture:"/sec2-5.jpg",
            price :"18$" ,
            name:"sweet ballon boom"  
           },
           {
-           picture:"",
+           picture:"/sec2-6.jpg",
            price :"17$" ,
-           name:"pink taddy"  
+           name:"pink teddy"  
           },
           
           {
-           picture:"",
+           picture:"/sec2-7.jpg",
            price :"5$" ,
            name:"rose with cake"  
           },
           {
-            picture:"",
+            picture:"/sec2-8.jpg",
             price :"15$" ,
             name:"chocolate rose"  
            },
           {
-           picture:"",
+           picture:"/sec2-9.jpg",
            price :"10$" ,
-           name:"taddy with ferrreo"  
+           name:"teddy with ferrreo"  
           },
           {
-            picture:"",
+            picture:"/sec2-10.jpg",
             price :"15$" ,
-            name:"healdy wishishes"  
+            name:"healdy wishes"  
            },
            
 
               {
-               picture:"",
+               picture:"/sec3-1.jpg",
                price :"16$" ,
                name:"eid basket"  
               },
               {
-               picture:"",
+               picture:"/sec3-2.jpg",
                price :"14$" ,
                name:"nimko basket"  
               },
               {
-               picture:"",
+               picture:"/sec3-3.jpg",
                price :"16$" ,
                name:"gift gem basket"  
               },
               {
-               picture:"",
+               picture:"/sec3-4.jpg",
                price :"18$" ,
                name:"bear coco basket"  
               },
               {
-               picture:"",
+               picture:"/sec3-5.jpg",
                price :"17$" ,
                name:"heart blooming basket"  
               },
               {
-               picture:"",
+               picture:"/sec3-6.jpg",
                price :"15$" ,
                name:"perfection basket"  
               },
               {
-               picture:"",
+               picture:"/sec3-7.jpg",
                price :"5$" ,
                name:"dove basket"  
               },
               {
-               picture:"",
+               picture:"/sec3-8.jpg",
                price :"10$" ,
                name:"be mine basket"  
               },
               {
-                picture:"",
+                picture:"/sec3-9.jpg",
                 price :"10$" ,
                 name:"snacks biscuit basket"  
                },
                {
-                   picture:"",
+                   picture:"/sec3-10.jpg",
                    price :"13$" ,
                    name:"baby girl basket"  
                   },
@@ -160,103 +160,103 @@ export const data  =[
 
 
                   {
-                   picture:"",
+                   picture:"/ssec4-1.jpg",
                    price :"16$" ,
                    name:"cushion"  
                   },
                   {
-                   picture:"",
+                   picture:"/sec4-2.jpg",
                    price :"14$" ,
                    name:"photo collage"  
                   },
                   {
-                   picture:"",
+                   picture:"/sec4-3.jpg",
                    price :"16$" ,
                    name:"couples name"  
                   },
                   {
-                   picture:"",
+                   picture:"/sec4-4.jpg",
                    price :"18$" ,
                    name:"temperature bottle"  
                   },
                   {
-                   picture:"",
+                   picture:"/sec4-5.jpg",
                    price :"17$" ,
                    name:"calender set"  
                   },
                   {
-                   picture:"",
+                   picture:"/sec4-6.jpg",
                    price :"15$" ,
                    name:"cup"  
                   },
                   {
-                   picture:"",
+                   picture:"/sec4-7.jpg",
                    price :"5$" ,
                    name:"picture mug"  
                   },
                   {
-                   picture:"",
+                   picture:"/sec4-8.jpg",
                    price :"10$" ,
                    name:"pen "  
                   },
                   {
-                    picture:"",
+                    picture:"/sec4-9.jpg",
                     price :"10$" ,
                     name:"night lamp"  
                    },
                    {
-                       picture:"",
+                       picture:"/sec4-10.jpg",
                        price :"13$" ,
                        name:"name ring"  
                       },
 
                       {
-                        picture: "",
+                        picture: "/sec5-1.jpg",
                         price: "16$",
                         name: "Delicious Cake"
                      },
                      {
-                        picture: "",
+                        picture: "/sec5-2.jpg",
                         price: "14$",
                         name: "Chocolate Cake"
                      },
                      {
-                        picture: "",
+                        picture: "/sec5-3.jpg",
                         price: "16$",
                         name: "Vanilla Cake"
                      },
                      {
-                        picture: "",
+                        picture: "/sec5-4.jpg",
                         price: "18$",
                         name: "Strawberry Cake"
                      },
                      {
-                        picture: "",
+                        picture: "/sec5-5.jpg",
                         price: "17$",
                         name: "Red Velvet Cake"
                      },
                      {
-                        picture: "",
+                        picture: "/sec5-6.jpg",
                         price: "15$",
                         name: "Caramel Cake"
                      },
                      {
-                        picture: "",
+                        picture: "/sec5-7.jpg",
                         price: "5$",
                         name: "Fruit Cake"
                      },
                      {
-                        picture: "",
+                        picture: "/sec5-8.jpg",
                         price: "10$",
                         name: "Cheesecake"
                      },
                      {
-                        picture: "",
+                        picture: "/sec5-9.jpg",
                         price: "13$",
                         name: "Black Forest Cake"
                      },
                      {
-                        picture: "",
+                        picture: "/sec5-10.jpg",
                         price: "17$",
                         name: "Lemon Cake"
                      }

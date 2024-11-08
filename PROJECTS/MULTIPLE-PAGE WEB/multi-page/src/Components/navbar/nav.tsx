@@ -4,8 +4,8 @@ import { ImMenu } from "react-icons/im";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Sec2 from "@/Components/Aboutus/sec2";
-import Contact from "../Contact/contact";
+import Sec2 from "@/Components/Aboutus/page";
+import  Sec3 from "../Ourgift/page"
 
 
 
@@ -30,32 +30,33 @@ const Nav = () => {
         </div>
         <div className="sm:flex lg:space-x-[80px] text-black lg:font-semibold lg:text-[25px] md:space-x-[30px] md:text-[20px] md:font-[600] sm:space-x-[30px] sm:text-[18px] sm:font-[500] absolute right-[50px] hidden">
           <Link
-            href="#"
+            href="./frontpage"
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
           >
             Home
           </Link>
          
           <Link
-            href="@Components/Aboutus"
+            href={"./Aboutus"}
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
           >
             About
           </Link>
           <Link
-            href="#"
+            href={"./Ourgift"}
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
           >
             Our gifts
           </Link>
+          
           <Link
-            href="/Aboutus/sec2"
+            href="/Ourshop"
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
           >
             Shop
           </Link>
           <Link
-            href={"/Contact/contact"}
+            href={"./Contact"}
             className="hover:underline hover:decoration-orange-400 hover:font-bold transition-all duration-300"
           >
             Contact Us
@@ -85,11 +86,11 @@ const Nav = () => {
         {menu == true ? (
           <motion.div
             className={
-              "absolute top-[60px] right-[2px] flex flex-col space-y-[20px] text-center font-bold  h-[240px] w-[160rpx] bg-black text-white text-[30rpx]  sm:hidden p-4 "
+              "absolute top-[60px] right-[2px] flex flex-col space-y-[20px] text-center font-bold  h-[260px] w-[160rpx] bg-black text-white text-[30rpx]  sm:hidden p-4 "
             }
             key={"menuu"}
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "240px", opacity: 0.8 }}
+            animate={{ height: "260px", opacity: 0.8 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
