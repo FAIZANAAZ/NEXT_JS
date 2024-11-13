@@ -1,8 +1,9 @@
+"use client"
 import React from 'react'
 import SwiperComponent from './SLID/slid'
 import Card from './Card/card'
 
-const Home = () => {
+const Items = () => {
   return (
     <div>
       <SwiperComponent/>
@@ -11,4 +12,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Items

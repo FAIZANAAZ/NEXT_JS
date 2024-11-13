@@ -1,0 +1,9 @@
+Mrgin
+Alt+select(alt ka button presskrky jisky bahir ka m dekhna he osko select krke maous ko bahir lekr jaygy or osko select krengy jisy darmiyan ka m dekhna hoga
+jesy oper sy dekhna he to ope jo he osko select kreny alt daba kr rakhty howy)
+
+Rem 
+px ko sect krky (alt +z) press krengy
+
+Space
+html me br sy to line nichy a jati he to space deny ke liye likhengy {" "}

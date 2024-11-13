@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { BsTelephoneFill } from 'react-icons/bs'
 import { MdOutlineEmail } from 'react-icons/md'

@@ -16,7 +16,7 @@ const Sec2 = () => {
                 <p
                     className="px-[20px] sm:px-0 mt-4 sm:text-start text-[14px] sm:text-[16px] md:text-[16px] text-center ">
                  
-                 Welcome to **Gift Sho**, your top source for unique and high-quality gifts. Our passion for finding the perfect items for every occasion means we're committed to offering you the best in quality, design, and customer care. With each gift, we aim to bring a little more joy into your life. Thank you for choosing us to be part of your gifting experience!
+                 Welcome to **Gift Sho**, your top source for unique and high-quality gifts. Our passion for finding the perfect items for every occasion means we are committed to offering you the best in quality, design, and customer care. With each gift, we aim to bring a little more joy into your life. Thank you for choosing us to be part of your gifting experience!
                 </p>
             </div>
 

@@ -1,0 +1,25 @@
+// (1)npm install aos --save --legacy-peer-deps
+
+// (2)npm install aos @types/aos --legacy-peer-deps
+
+// (3)import AOS from 'aos';
+
+// (4)import 'aos/dist/aos.css';
+
+// (5)  useEffect(() => {
+//     if (typeof window !== "undefined") {
+//       AOS.init({
+//         offset: -100, // Jab 200px scroll ho, tab animation trigger ho
+//         duration: 500, // Animation ka duration
+//         easing: 'ease-in-out', // Animation ka easing effect
+//         once: true, 
+//         delay: 100, // Animation sirf ek baar chale
+//       });
+//     }
+//   }, []);
+
+// //   components k ander return ke oper
+
+// (6)data-aos="zoom-in"
+// // ye aos ki library me jo cards me code likha hota he osko copy krky hmy os card ki div me rkhna he jispr animation lgai he
+// // or ye card ki animations or trha ki bhi hoti he wo website se miljayga 
