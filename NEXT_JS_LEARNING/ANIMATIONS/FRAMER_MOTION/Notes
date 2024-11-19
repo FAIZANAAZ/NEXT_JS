@@ -71,3 +71,60 @@ FRAMER MOTION PROCESS :
 
 <!-- //////////////////////////////////// -->
 
+<!-- for cards and projects map loop -->
+<motion.div
+intial={{opacity:0,scale:0}}
+whileInView={{opacity:1,scale:1}}
+transition={{duration:0.5}}
+>
+</motion.div>
+
+<!-- //////////////////////////////////// -->
+<!-- agr hm chahty hen ke ak ak card pr alag alag animation ho wo bhi 3d wali applay ho to hm 2 components bnaygy -->
+ import {motion ,useMotionValue,useTransform} from "framer-motion"
+
+
+const component=()=>{
+    return(
+        {data.map((item ,index)=>{
+            return(
+                <Card key={index} item={item}/>
+            )
+            
+        })}
+    )
+}
+
+function Card({item}:{item:{src:string,title:string}}){
+   <!-- jo jo data he osky motabic data type set krengy -->
+    const cardref= useRef<HTMLDivElement>(null);
+        <!-- !ye control kryga sb data ko--  --> 
+    const mouseX=useMotionValue(0);
+    const mouseY=useMotionValue(0);
+    <!-- YE mouse ko track krwga OR ISMY HM VALue set krengy x y ki or ye famermotion ka apna hook he x or y me-->
+     const rotateX=useTransform(mouseX,[-100,100],[-10,10]);
+     const rotateY=useTransform(mouseY,[-100,100],[10,-10]);
+     <!-- inm sy ak input array khlata he or dosra output -->
+     <!-- ye array btayga ke hmara div jo motion dega wo kitna dega mouse ke oper -->
+     const handleMouseMove=(e:React.MouseEvent)=>{
+        if(!cardref.current)return;
+        <!-- isy hmara error nhi ayga iska matlb he ke agr hmara cardref null ho jata hai to hmara code run nhi hoga wahi sy return ho jayga-->
+         const rect=cardref.current.getBoundingClientRect();
+   const x= e.clientX-rect.left - rect.width/2;
+   const y= e.clientY-rect.top - rect.height/2;
+   mouseX.set(x);
+   mouseY.set(y);
+     }
+
+     <!-- ye handler hmary web sy mouse ki value ko lekr ayga or hmary varible me set kryga -->
+     return(
+         <div ref={cardref}
+          onMouseMove={handleMouseMove}
+          <!-- ye 3d wali applay krwga -->
+          style={{perspective:1000, rotateX:rotateX,rotateY:rotateY}}
+          ></div>)}
+          
+        
+     
+   
+    
