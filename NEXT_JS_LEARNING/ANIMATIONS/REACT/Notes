@@ -1,0 +1,27 @@
+// REACT TYPEWRITER EFFECT
+
+// 1.npm i react-simple-typewriter --legacy-peer-deps
+// //hm simple ke ilawa bhi seacr krky le skty hen 
+// //isky web sy hm isky atributes bhi or skty hen ke kiya kiya applay kr skty hen hm
+
+
+// 2.import {Typewriter}from 'react-simple-typewriter'; //import krly
+
+
+// 3.<Typewriter words={['hello', 'fiza',naaz]}
+//loop = {1} 
+// cursor ={true}
+// cursorStyle={'_'}
+// typeSpeed={70} //speed of typing
+// deleteSpeed={50} //speed of deleting
+// delay ={1000} //dealy kitna lay ak word sy dosry word ke any me
+// /> 
+// //typewriter ke atributes hain jo hm apnay kr skty hen or bhi hen kafi wo web sy dekh skty hen
+
+
+
+
+// yani ismy hoga ye ke phla word hello aayega or wo mity ga phir fiza aayega or wo mity ga phir naaz aayega 
+// </Typewriter>
+
+

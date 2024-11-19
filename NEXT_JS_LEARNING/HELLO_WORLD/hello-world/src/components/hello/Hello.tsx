@@ -12,7 +12,7 @@ import React from 'react'
 function Hello() {
   return (
     <div>
-      <h1 className='mt-60 text-[50px] font-bold bg-yellow-300 border-dotted border-red-600 border-[20px] p-3 animate-bounce'><u>NEXT-JS : (HELLO WORLD)</u></h1>
+      <h1 className='response mt-60 text-[50px] font-bold bg-yellow-300 border-dotted border-red-600 border-[20px] p-3 animate-bounce'><u>NEXT-JS : (HELLO WORLD)</u></h1>
     </div>
   )
 }

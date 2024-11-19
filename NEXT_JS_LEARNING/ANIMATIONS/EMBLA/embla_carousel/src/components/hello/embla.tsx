@@ -79,3 +79,16 @@ export default Emla
 // stopOnInteraction: false iska matlb jb bhi ispr intrection ho wo stop ho jay
 // stopOnMouseEnter: false iska matlb jb mouse lekr jay to wo rok jayga or htaygy to rok jayga
 
+
+
+// hm embla ke card ki wirdhth ko is trha dengy ke wirth : cal(100% - 100px)/3
+// ismy hmny kha 100 wirth lo phly phir osmy sy 100px - krdo lekin iski jha hm wo likhengy jo gap pading wagera mila kr 
+// bnyga osko - krengy or phir / 3 or ye 3 wo card hen jo overflow hidden waly cards ko hta kr srif
+// web pr wo cards dikhengy wo hen agr card hm 4 dikhana chalaty hen to / 4 krengy 
+
+// wirth : cal(100% - 100px)/3
+//flex-shrink :0 (iska matlb card ki jitni wirdh di he otni le zada card any pr wo chota na ho jay )
+// flex-grow :0 (iska matlb card ki jitni hight he contance rakheny ke bad otni he le bar na jay lambi na ho kioky hm hight nhi dety wo contant sy khod cover hoti he isi liye jb card srink hoty hen to wo nichy sy lamby ho jaty he )
+
+// felex : 0 0 calc((100% - 100px)/3);
+// ya hm wo sb ak line me bhi de skty hen

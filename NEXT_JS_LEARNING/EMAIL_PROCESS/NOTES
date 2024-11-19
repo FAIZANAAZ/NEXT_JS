@@ -1,0 +1,91 @@
+open emailjs (https://www.emailjs.com/)
+create a new emailjs account 
+go => account and copy public key
+
+go => service any click add new service select gmail and copy the service id
+or id ko bar bar copy krna pryga jb bhi use krengy ye chang hogi
+
+osky nichy hi click krengy connent account pr phir apna account connet krengy gmail wala or continue continue krengy 
+
+osky bad config service open howa wa hoga jha sy hmny id copy ki he ospr hm krengy ab cheq lga kr create service (isy wo bs email hmy bhej kr cheq kryga ke account connet how he ya nhi or hmary  pas ak email aygi )
+
+os email me jaengy xgeq sequrity ki bhi sath email aygi goole s osmy activity me jakr yes i am krengy phir email js ki emal me dekhengy ke ai he ya nhi ai he to sahi he wrna again kro 
+
+go email template click create new template edit pr jakr design editer sy hm apna bhi bna skty hen ke agr koi emai kry to kis trha ay 
+apply changes => save
+
+again click  email template or phir ak template id milygi copy krni he aksar copy krny sy wo open ho jta he or copy nhi ho pta to whi setting ka option he wha sy bhi kr skty hen hm copy 
+
+
+than go email js website than click docs than click instalation than copy npm command and past terminal (jha hm lagna chahry hen)
+npm i emailjs-com --legacy-peer-deps "/browser isko hta kr -com likhengy "
+
+creat .env.local blkl bahir 
+
+osky ander hm jo kesy likhi thi sb past krengy or keys ke ilawa sb capital me 
+NEXT_PUBLIC_EMAILJS_SERVICE_ID="service_o3wrpdr"
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID="template_02citrz"
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY="SSg9w5nt18Q2jOcC8"
+
+than hm gitignore ki file me jaygy or .env.locak ko rakh dengy (kioky ismy hmari persanl info he to githup pr na jay)
+
+create folder utils in src
+create file emailServices.ts in utils folder
+past:
+<!-- import emailjs from "emailjs-com"
+
+export const sendEmail = async (templateParams: Record<string, string>) => {
+    try {
+ const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!; 
+ const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+ const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+
+ const response = await emailjs.send(serviceID, templateID, templateParams, publicKey);
+
+ return response
+
+    } catch (error) {
+        console.log("Failed to Send Email",error)
+        throw error;
+    }
+    
+}  -->
+
+in emailServices.ts file
+
+and past 
+
+<!--  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    const templateParams = {
+      to_name: "Faiza Naaz",
+      from_name: name,
+      email: email,
+      message: message
+    }
+    try {
+      await sendEmail(templateParams)
+      alert("Email sent successfully")
+      setName("")
+      setEmail("")
+      setMessage("")
+    } catch (error) {
+      console.log("EmailJs Error", error);
+      alert("Failed to sent email")
+
+
+
+    }
+  } --> in contact.tsx return ke oper
+
+  and past
+  <!--  name="message" value={message} onChange={(e) => setMessage(e.target.value) -->
+  in email input name input jitny bhi input hen sbmy bs name or fuction ka name chang krky
+
+
+
+
+

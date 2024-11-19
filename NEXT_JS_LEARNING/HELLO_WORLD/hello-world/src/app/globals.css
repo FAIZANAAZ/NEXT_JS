@@ -14,3 +14,38 @@ body {
   justify-content: center;
   
 }
+
+@media (max-width: 721px) {
+  .response{
+    font-size: 40px;
+  }
+
+}
+
+@media (max-width: 565px) {
+  .response{
+    font-size: 30px;
+  }
+
+}
+
+@media (max-width: 435px) {
+  .response{
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 319px) {
+  .response{
+    font-size: 18px;
+  }
+
+}
+
+@media (max-width: 283px) {
+  .response{
+    font-size: 15px;
+  }
+
+}

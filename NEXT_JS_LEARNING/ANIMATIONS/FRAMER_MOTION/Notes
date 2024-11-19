@@ -1,0 +1,73 @@
+FRAMER MOTION PROCESS :
+(1)install framer motion (npm I framer-motion  --legacy-peer-dps)
+(2 )import {motion} from “framer-motion”
+(3) jis pr applay krna he osky tag ke sath lgaygy jesy <motion.span><motion.span/>
+
+//framer motion me hm css ki property hi appay krty hen ak object ki trha jesy
+
+<!-- image ke tage ke sat hm motion . nhi lga skty osy kisi div me rkh kr applay kr skty hen -->
+
+<!-- //////////////////////////////////// -->
+
+<motion.span>
+(4) animate={{rotate:[0,15,-10,20,-10,0]}}
+<!-- ismt hmny kha ke phly 0 yani jis position pr he wahi rhy phir ghomy 15 , phir wpas 0 ki traf akr -10 pr ghomy esy hi sb hoga or end me 0 api orignal positon me a jay -->
+ transition={{duration:2 , repeat:Infinity,ease:"easeInOut"}}
+<!-- easeInOut matlb he ahista ahista -->
+ initial={{rotate:[0,15,-10,20,-10,0]}}
+<motion.span/>
+
+<!-- //////////////////////////////////// -->
+
+<motion.span>
+
+     initial={{opacity :0 ,x:-100}}
+     <!-- yani wo animation hony sy phly kis conditiion me ho yani ak to nazr na ay dora screnn sy -100 bahir chly jay phir wha sy ay  -->
+      whileInView={{opacity:1,x:0}}
+      <!-- yani scrol bar ke sath chlyga ye or jb ay wha tk to wo 0 yani whi wapas a jay or opacity sy nazr ay-->
+
+      transition={{duration:2 , repeat:Infinity,ease:"easeInOut" ,type:"spring"}}
+      <!-- spring sy ye hoga ke wo akr thora sa bounce hoga -->
+
+ <motion.span/>
+    
+<!-- //////////////////////////////////// -->
+ <!-- hm varient bna kr bhi osko connet krwa skty hen
+   -->
+ const parenvariant={
+    hidden:{},
+     show:{
+         transition:{
+             staggerChildren:0.5
+         }
+         <!-- yani isky jo child hen wo ak ak krky animate hon 0.5s sy-->
+     }
+
+ }
+
+ const childvariant={
+
+     hidden:{opacity:0,y:50},
+     show:{opacity:1,y:0}
+ }
+ <motion.div className
+ ={styles.parentduiv}
+ variants={parentvariant}
+ initial="hidden"
+ whileInView="show"
+ >
+
+
+    <motion.div class="childdiv" variants={childvariant}></motion.div>
+    <motion.div class="childdiv" variants={childvariant}></motion.div>
+    <motion.div class="childdiv" variants={childvariant}></motion.div>
+    <motion.div class="childdiv" variants={childvariant}></motion.div>
+    <motion.div class="childdiv" variants={childvariant}></motion.div>
+    <motion.div class="childdiv" variants={childvariant}></motion.div>
+
+
+
+<motion.span/>
+
+<!-- //////////////////////////////////// -->
+
