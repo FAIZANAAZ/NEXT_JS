@@ -15,7 +15,7 @@ const RegisterPage = () => {
     if (response!=='Failed to register client' && response!=='Email already exists') {
       const token =response
       localStorage.setItem('accessToken', token)
-      localStorage.setItem('ClientName', name)
+      localStorage.setItem('clientName', name)
 
       // ye broswer ki memory hoti he jismy rakhty hen hm wha sy ai hoi chiz
       alert('Registration successful')

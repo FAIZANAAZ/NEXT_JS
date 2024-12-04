@@ -1,6 +1,6 @@
 "use client"
 import { Button } from '@/components/ui/button'
-import { deleteOrder, grtOrder } from '@/services/order'
+import { deleteOrder, getOrder } from '@/services/order'
 import { Link } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import Image from "next/image"
@@ -8,11 +8,11 @@ import { MdOutlineDeleteForever } from "react-icons/md";
 
 const ShowPage = () => {
   const token = localStorage.getItem('accessToken')
-  const [set, setOrder] = useState([])
+  const [set, setOrder] = useState<any[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
-      const orders: any = await grtOrder(token)
+      const orders: any = await getOrder(token)
 
       if (orders !== 'Failed to get orders') {
         setOrder(orders)

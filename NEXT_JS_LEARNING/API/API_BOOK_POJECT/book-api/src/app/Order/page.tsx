@@ -7,18 +7,25 @@ import React from 'react'
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
 // import { FaShoppingCart } from "react-icons/fa";
 
- const Orderpage = (bookId:any) => {
-  const btnFunc=async()=>{
+ const Orderpage = () => {
+ const btnFunc=async(bookId:any)=>{
   const token  =localStorage.getItem("accessToken")
-  const ClientName = localStorage.getItem("ClientName")
+  const clientName = localStorage.getItem("clientName")
 
-  if (!token && !ClientName) {
-    alert("Mising Token or ClientName")
+console.log(`token😍:${token}`);
+console.log(`clientName😎:${clientName}`);
+console.log(`bookId😪:${bookId}`);
 
-    
+
+
+  if (!token && !clientName ) {
+    alert("Missing Token or clientName")
+    // agr usr direct url ke zrite a jay bina athantication ke
+
+    return;
   }
 
- const data= await PlaceOrder(token,bookId, ClientName)
+ const data= await PlaceOrder(token,bookId, clientName)
 
  if (data !== 'Failed to place order') {
   alert("Order Placed Successfully")

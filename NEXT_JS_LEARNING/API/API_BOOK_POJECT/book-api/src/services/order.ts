@@ -1,5 +1,5 @@
 "use server"
-export async function PlaceOrder(token:any,bookId:any, ClientName:any) {
+export async function PlaceOrder(token:any,bookId:any, clientName:any) {
     
 
 
@@ -10,8 +10,8 @@ const response=await fetch("https://simple-books-api.glitch.me/orders",{
          "Authorization":`Barer ${token}`
     },
     body:JSON.stringify({
-        "bookId": 1,
-  "customerName": ClientName
+        "bookId": bookId,
+       "customerName": clientName
     })
 })
 if (response.status !== 201) {
@@ -25,12 +25,12 @@ return data
 
 
 //////////////////////////////orders
-export async function grtOrder(token:any) {
+export async function getOrder(token:any) {
 
     let response=await fetch("https://simple-books-api.glitch.me/orders",{
         method:"GET",
         headers:{
-            "Authorization":`Barer ${token}`
+            "Authorization":`Bearer ${token}`
         }
     })
     if (!response.ok) {
