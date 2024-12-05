@@ -7,38 +7,41 @@ import { Input } from './ui/input'
 const Header = () => {
   return (
     <>
-    <section>
+    <section >
         {/* top header */}
-        <div className='w-full h-[48px] bg-black  flex justify-between text-white items-center '>
-            <div className='flex gap-2 items-start text-center ml-[309px]'>
+        <div className='w-full h-[48px] bg-black px-[135px]  flex pl-[445px] pr-[136px] text-white items-center '>
+            <div className='flex w-[859px] justify-between items-start  '>
+         <div className='flex gap-2'>
          <span>
          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%
          </span>
          <Link href={"/"} className='hover:underline font-semibold'>ShopNow</Link>
-            </div>
+         </div>
+            
 
 {/* dropdown */}
-<div className=''>
-    <DropdownMenu>
-    <DropdownMenuTrigger className='flex gap-1 items-center focus:outline-none '/>
-    English
-    <ChevronDown size={24}/>
-    <DropdownMenuTrigger/>
-    <DropdownMenuContent>
-<DropdownMenuItem>English</DropdownMenuItem>
-<DropdownMenuItem>Urdu</DropdownMenuItem>
-<DropdownMenuItem>Arabic</DropdownMenuItem>
-
-    </DropdownMenuContent>
+<div className='flex '>
+    
+<DropdownMenu>
+      <DropdownMenuTrigger className="flex gap-1 items-center focus:outline-none text-end">
+        English
+        <ChevronDown size={24} />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="bg-white shadow-md rounded-md p-2">
+        <DropdownMenuItem className="cursor-pointer hover:bg-gray-100">English</DropdownMenuItem>
+        <DropdownMenuItem className="cursor-pointer hover:bg-gray-100">Urdu</DropdownMenuItem>
+        <DropdownMenuItem className="cursor-pointer hover:bg-gray-100">Arabic</DropdownMenuItem>
+      </DropdownMenuContent>
     </DropdownMenu>
 </div>
 
+    </div>
 
         </div>
         {/* bottom  header */}
-<div className='w-full border-b-[1px]  pt-[40px] pb-[16px] border-gray-200'>
-    <div className='m-auto pt-6 flex gap-[108px] ' >
-        <div className='flex items-center justify-between gap-[100px] '>
+<div className='w-full border-b-[1px]  pt-[40px] pb-[16px] px-[135px] border-gray-200'>
+    <div className='m-auto pt-6 flex gap-[108px]  ' >
+        <div className='flex items-center justify-between w-[675px] '>
             {/* logo */}
             <Link href={"/"} className='text-black font-bold text-xl'> Exclusive</Link>
             {/* navigation */}

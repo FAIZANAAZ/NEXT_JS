@@ -1,12 +1,15 @@
 import React from 'react'
 import RedHeading from './redheading'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import {  ChevronLeft, ChevronRight} from 'lucide-react'
 import { Button } from './ui/button'
+
+import ProductCard from './productcards'
+import { flashCard } from '@/constant/flascard'
 
 const FlashSale = () => {
   return (
    <>
-   <section className='mb-[500px]'>
+   <section className=' pl-[135px] '>
 {/* today's */}
 
 <RedHeading text={" Today's "} textColor={"red"} />
@@ -59,21 +62,26 @@ const FlashSale = () => {
     {/* round button */}
     <div className='flex gap-2'>
     <Button variant={"outline"} size={"icon"}    className="rounded-full">
-      <ChevronRight size={24}/>
+      <ChevronLeft size={24}/>
     </Button>
     <Button variant={"outline"} size={"icon"} className="rounded-full">
       
       <ChevronRight size={24}/>
     </Button>
+    </div> 
     </div>
-
-    
-
-    
-     
     </div>
-  </div>
-</div>
+    </div>
+              {/* Cards Div */}
+           <div>   <div className='w-[1308px]   mt-[40px] flex gap-[30px] overflow-x-auto  '>
+           <ProductCard loop={flashCard}/>
+        </div>
+        <div className='text-center mt-[60px]'>
+          
+        <button className='bg-[#DB4444] text-white py-[10px] px-[58px] text-center hover:bg-gray-600 rounded-[4px] text-[16px] leading-[24px]'>View All</button>
+        </div>
+        </div>
+
 
 
    </section>

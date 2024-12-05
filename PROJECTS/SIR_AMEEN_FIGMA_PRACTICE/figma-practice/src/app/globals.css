@@ -3,13 +3,12 @@
 @tailwind utilities;
 
 body{
-  width: 100%;
-  max-width: 1440px;
+width: 100%;
+ max-width: 1440px;
   margin: auto;
   font-family: Arial, sans-serif;
   background: white;
-  padding-left:135px ;
-  padding-right:135px ;
+
 
 }
 
