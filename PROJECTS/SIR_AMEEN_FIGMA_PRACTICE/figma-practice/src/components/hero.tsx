@@ -7,7 +7,7 @@ import Image from 'next/image'
 const Hero = () => {
   return (
     <>
-    <section className='w-full flex mb-[140px] px-[135px]'>
+    <section className='w-full flex mb-[140px] '>
         {/* side bar */}
         <nav className='flex flex-col gap-4 w-[217px] mt-[40px] '>
             {categories.map((catigory)=>(

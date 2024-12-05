@@ -9,7 +9,7 @@ import { flashCard } from '@/constant/flascard'
 const FlashSale = () => {
   return (
    <>
-   <section className=' pl-[135px] '>
+   <section className=' '>
 {/* today's */}
 
 <RedHeading text={" Today's "} textColor={"red"} />

@@ -7,7 +7,7 @@ import menuItems from '@/constant/categoryies'
 const Category = () => {
   return (
     <>
-    <section className='px-[135px] '>
+    <section className=' mt-[60px] '>
 {/* for underline */}
         <div className=' h-[463px] pb-[70px] pt-[80px]  border-gray-300 border-b-[1px] border-t-[1px]'>
 <div className='w-full flex flex-col gap-[60px]'>
