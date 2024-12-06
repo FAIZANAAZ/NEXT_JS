@@ -3,8 +3,8 @@ import Features from "@/components/features";
 import FlashSale from "@/components/fleshsale";
 import Hero from "@/components/hero";
 import Month from "@/components/month";
-import NewArrival from "@/components/newarival";
 import OurProduct from "@/components/OurProducts";
+import ServiceFeatures from "@/components/service";
 
 
 export default function Home() {
@@ -13,10 +13,11 @@ export default function Home() {
     <Hero/>
   <FlashSale/>
   <Category/> 
-  <NewArrival/>
+  
   <Month/>
   <OurProduct/>
   <Features/>
+  <ServiceFeatures/>
   </div>
   </>
  

@@ -1,5 +1,6 @@
 import React from 'react'
 import RedHeading from './redheading'
+import Image from 'next/image'
 
 const Features = () => {
   return (
@@ -15,7 +16,27 @@ const Features = () => {
        </h1>
         </div>
         </div>
+        {/* images sec arival */}
+
+        <div className='w-full h-[600px] grid grid-cols-4 grid-rows-2 gap-[30px] mt-[60px] '>
+          <div className='bg-green-400 col-span-2 row-span-2 relative'>
+            <Image src={"/frame4.png"} alt={"image"}  objectFit='cover' layout='fill'/>
+          </div>
+          <div className='bg-yellow-300 col-span-2 relative'>
+          <Image src={"/frame3.png"} alt={"image"}  objectFit='cover' layout='fill'/>
+
+          </div>
+          <div className='bg-red-700 relative'>
+          <Image src={"/frame2.png"} alt={"image"}  objectFit='cover' layout='fill'/>
+
+          </div>
+          <div className='bg-blue-950 relative'>
+          <Image src={"/frame1.png"} alt={"image"}  objectFit='cover' layout='fill'/>
+
+          </div>
+        </div>
         
+        {/*  */}
 
     </section>
     </>

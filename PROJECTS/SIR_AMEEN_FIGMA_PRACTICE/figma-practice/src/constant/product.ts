@@ -74,7 +74,7 @@ export interface OurProductDataType {
       eyeIcon: true,
       discountPrice: "New",
       colorDiv:true,
-      color1:"bg-orange-500",},
+      color1:"bg-red-400",},
     {
       id: 6,
       src: "/shoes.png",
@@ -86,7 +86,7 @@ export interface OurProductDataType {
       heartIcon: true,
       eyeIcon: true,
       colorDiv:true,
-      color1:"bg-yellow-500"},
+      color1:"bg-red-300"},
     {
       id: 7,
       src: "/game2.png",
