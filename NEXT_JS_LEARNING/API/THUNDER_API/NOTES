@@ -1,5 +1,10 @@
 CRUD = CREATE READ UPDATE DELETE
+	3 TRHA KE TOOL KO HM API KE LIYE USE KR SKTY HEN
+1)THANDER CLIENT
+2)INSOMNIA
+3)POSTMAN
 
+////////////////////////////////////////////////$
 GET = READ "isy hm api ko read kr skty hen bs or koch nhi"
 POST = CREATE "isy hm api ko create kr skty hen bs or koch nhi"
 PUT = UPDATE "isy hm api ko update kr skty hen bs or koch nhi"

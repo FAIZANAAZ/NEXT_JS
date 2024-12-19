@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 //1))) Default Behavior of Next.js:
 
+// FIRSTLY browser (client) pr jb rquest ati he to wo jata he server pr
 // Jab hum page.tsx use karte hain, to Next.js apne framework ke mutabiq ek default HTML response generate karta hai aur client ko bhejta hai.
 
 // Yeh ho raha hai ke jab hum page.tsx ki file banate hain, to Next.js apna response bhejta hai. Jaise jab hum about ka route banaya aur usmein page.tsx ki file likhi, to Google ka server Next.js ke server par gaya. Phir Next.js ne ek HTML response bhej diya, aur us route ka jo bhi kaam hoga wo sab dikhayega. Kyunki Next.js ek framework hai jo isko handle karta hai.
@@ -20,12 +21,13 @@ export function GET(request:NextRequest) {
     // ismy wo sb show krwata he ke hm agr kisi ki api use kry hen or hm ye dekhna chaty hen ke end point kiya he https kiya he to wo hm esy dekh skty hen   
    const url = request.nextUrl
    const urlParams = url.searchParams.get("name")
+//    yha hm request me ak property hoty he nexturl hmny phly osko bolaya or osmy sy searchParams.get sy hmny name lekr ay hen wo name jo hmny searchParams ke url me link ke ander set kiya tha 
   
    
 if (urlParams === "Faiza Naaz") {
-    return NextResponse.json({ "name": "Faiza Naaz", "age": 25, "gender": "Female" })
-}else if (urlParams === "taha") {
-    return NextResponse.json( { "name": "taha", "age": 25, "gender": "Male" })
+    return NextResponse.json({ "name": "Faiza Naaz", "age": 30, "gender": "Female" })
+}else if (urlParams === "Taha") {
+    return NextResponse.json( { "name": "Taha", "age": 25, "gender": "Male" })
     
 }else if (urlParams === "Sara") {
     return NextResponse.json({ "name": "Sara", "age": 22, "gender": "Female" })
@@ -57,31 +59,7 @@ else{
     return NextResponse.json({message: "request not found" })
 }
 }
-//     return NextResponse.json([
-//         ,
-//         { "name": "Ali Khan", "age": 30, "gender": "Male" },
-//         { "name": "Sara Ahmed", "age": 22, "gender": "Female" },
-//         { "name": "Hamza Sheikh", "age": 28, "gender": "Male" },
-//         { "name": "Ayesha Tariq", "age": 27, "gender": "Female" },
-//         { "name": "Zain Malik", "age": 24, "gender": "Male" },
-//         { "name": "Hina Qureshi", "age": 26, "gender": "Female" },
-//         { "name": "Usman Ali", "age": 29, "gender": "Male" },
-//         { "name": "Nida Aslam", "age": 23, "gender": "Female" },
-//         { "name": "Fahad Jamil", "age": 31, "gender": "Male" }
-//       ]
-//       )
-// }
 
-export function POST(){
-    return NextResponse.json({ "message": "i am post request" });
-}
 
-export function PUT() {
-    
-    return NextResponse.json({ "message": "i am PUT request" });
-}
 
-export function DELETE() {
-    
-    return NextResponse.json({ "message": "i am DELETE request" });
-}
+ 
