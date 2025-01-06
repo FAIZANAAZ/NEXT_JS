@@ -1,0 +1,37 @@
+1- Sign Up for Snipcart
+
+2-add to card waly sary routs delet krna he hona hi nhi chiye wo sb khod hi bna kr dega
+
+3- DASHBOARD -> Generate Live API key and start selling!-> Account → API keys->Get Your API Key
+
+4-ADD in layout body sy oper html ke ander <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"/>
+   </head>
+
+5- (body me add karna he)
+	<Script
+          src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"
+          strategy="afterInteractive"/>
+
+         <div hidden id="snipcart" data-api-key={process.env.NEXT_PUBLIC_SNIPCART_API_KEY} data-config-modal-style="none"></div>
+
+
+6- (dynamic page)
+	declare global {
+  		interface Window {
+    		Snipcart: any;
+  		}}
+
+7- (onclick par function chalega)add to cart pr
+ const handleAddToCart = () => {
+      window.Snipcart.api.cart.items.add({
+      id: heading,
+      name: heading,
+      price: price,
+      url: `/products/productDetail?heading=${heading}&subHeaeding=${subHeaeding}&price=${price}&src=${src}`,
+      description: subHeaeding,
+      image: src,
+    });
+  };

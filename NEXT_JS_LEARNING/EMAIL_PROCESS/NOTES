@@ -1,3 +1,5 @@
+
+
 open emailjs (https://www.emailjs.com/)
 create a new emailjs account 
 go => account and copy public key
@@ -10,6 +12,10 @@ osky nichy hi click krengy connent account pr phir apna account connet krengy gm
 osky bad config service open howa wa hoga jha sy hmny id copy ki he ospr hm krengy ab cheq lga kr create service (isy wo bs email hmy bhej kr cheq kryga ke account connet how he ya nhi or hmary  pas ak email aygi )
 
 os email me jaengy xgeq sequrity ki bhi sath email aygi goole s osmy activity me jakr yes i am krengy phir email js ki emal me dekhengy ke ai he ya nhi ai he to sahi he wrna again kro 
+
+
+
+
 
 go email template click create new template edit pr jakr design editer sy hm apna bhi bna skty hen ke agr koi emai kry to kis trha ay 
 apply changes => save
@@ -79,7 +85,7 @@ and past
 
 
     }
-  } --> in contact.tsx return ke oper
+  } --> in jha pr use krna he wha
 
   and past
   <!--  name="message" value={message} onChange={(e) => setMessage(e.target.value) -->
