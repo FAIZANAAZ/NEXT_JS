@@ -17,16 +17,19 @@
 
          <div hidden id="snipcart" data-api-key={process.env.NEXT_PUBLIC_SNIPCART_API_KEY} data-config-modal-style="none"></div>
 
+6-COPY (NEXT_PUBLIC_SNIPCART_API_KEY) PAST env.local 
 
-6- (dynamic page)
+6-copy 
 	declare global {
   		interface Window {
     		Snipcart: any;
-  		}}
+  		}}  
+      past dynamic page components ke bahir or oper
 
-7- (onclick par function chalega)add to cart pr
+7-copy 
  const handleAddToCart = () => {
       window.Snipcart.api.cart.items.add({
+
       id: heading,
       name: heading,
       price: price,
@@ -35,3 +38,9 @@
       image: src,
     });
   };
+
+  past in dynamic page components ke ander 
+   (onclick par function chalega)add to cart pr is function ko chalana he
+
+
+8-client components hona chiye lazim    
