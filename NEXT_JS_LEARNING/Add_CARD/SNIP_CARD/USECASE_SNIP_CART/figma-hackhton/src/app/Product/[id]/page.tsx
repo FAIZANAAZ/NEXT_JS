@@ -19,26 +19,49 @@ const colors = ['#4f4631', '#314f4a', '#6e2c7d'] // Brown, Green, Purple
 export default function ProductDetail() {
   const searchParams = useSearchParams()
 
+  
   const imageUrl = searchParams.get('imageUrl') || ''
   const h1 = searchParams.get('h1') || ''
   const ranking = searchParams.get('ranking') || ''
   const price = searchParams.get('price') || ''
+  const initialSelectedSize = searchParams.get('selectedSize') || 'Medium'
+  const initialSelectedColor = searchParams.get('selectedColor') || colors[0]
 
-  const [selectedSize, setSelectedSize] = useState('Medium')
-  const [selectedColor, setSelectedColor] = useState(colors[0])
 
-  const handleAddToCart = () => {
-    window.Snipcart.api.cart.items.add({
-      id: h1,
-      name: h1,
-      price: price,
-      url: `/products/productDetail?heading=${h1}&stars=${ranking}&ranking=${ranking}&price=${price}&id=${h1}`,
-      size: selectedSize,
-      color: selectedColor,
-      image: imageUrl,
-      quantity: 1
-    });
-  };
+  const [selectedSize, setSelectedSize] = useState(initialSelectedSize)
+  const [selectedColor, setSelectedColor] = useState(initialSelectedColor)
+
+
+ const handleAddToCart = () => {
+  // URL parameters encode kar rahe hain to handle spaces and special characters
+  const url = `/products/productDetail?heading=${encodeURIComponent(h1)}&stars=${encodeURIComponent(ranking)}&ranking=${encodeURIComponent(ranking)}&price=${price}&id=${imageUrl}&selectedSize=${selectedSize}&selectedColor=${selectedColor}`;
+
+  // Snipcart API call
+  window.Snipcart.api.cart.items.add({
+    id: imageUrl,
+    name: h1,
+    price: price,
+    url: url, // Properly encoded URL
+    image: imageUrl,
+    quantity: 1,
+    customFields: [
+      {
+        name: "Ranking",
+        value: ranking, // Ranking as custom field
+      },
+      {
+        name: "Size",
+        value: selectedSize, // Adding Size
+      },
+      {
+        name: "Color",
+        value: selectedColor, // Adding Color
+      },
+    ],
+  });
+};
+
+  
 
   return (
     <div className="max-w-[1440px] mx-auto px-6 py-8">

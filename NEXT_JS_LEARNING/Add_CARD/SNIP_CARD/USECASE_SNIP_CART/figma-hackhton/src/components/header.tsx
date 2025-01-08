@@ -15,8 +15,32 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { useSearchParams } from "next/navigation"
+
+declare global {
+  interface Window {
+    Snipcart: any;
+  }
+}
 
 export default function Header() {
+
+   const searchParams = useSearchParams()
+  
+    const imageUrl = searchParams.get('imageUrl') || ''
+    const h1 = searchParams.get('h1') || ''
+    const ranking = searchParams.get('ranking') || ''
+    const price = searchParams.get('price') || ''
+  const handleAddToCart = () => {
+    window.Snipcart.api.cart.items.add({
+      id: h1,
+      name: h1,
+      price: price,
+      url: `/products/productDetail?heading=${h1}&stars=${ranking}&ranking=${ranking}&price=${price}&id=${imageUrl}`,
+      image: imageUrl,
+      quantity: 1
+    });
+  };
   const [showBanner, setShowBanner] = React.useState(true)
 
   return (
@@ -163,8 +187,9 @@ export default function Header() {
                 variant="ghost"
                 size="icon"
                 aria-label="Cart"
+                onClick={handleAddToCart}
               >
-               <Link href={"/Addcard"}> <FiShoppingCart className="w-5 h-5" /></Link>
+                <FiShoppingCart className="w-5 h-5" />
               </Button>
               
             </div>
