@@ -1,4 +1,5 @@
 "use client";
+
 import { client } from "@/sanity/lib/client";
 import { fetchAndUploadProducts } from "@/services/api";
 import Image from "next/image";
