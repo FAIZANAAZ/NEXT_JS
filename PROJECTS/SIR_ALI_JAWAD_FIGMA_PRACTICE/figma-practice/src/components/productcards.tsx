@@ -4,10 +4,22 @@ import Image from "next/image";
 
 import { Button } from "./ui/button";
 import { Eye, Heart, Star, Trash2 } from "lucide-react";
-import { FlashCard } from "@/constant/flascard";  2
 
 
-function ProductCard({loop}: {loop: FlashCard[]}) {
+interface FlashCardtype {
+  discountBtn: boolean;
+  discountPrice: number;
+  trashIcon: boolean;
+  heartIcon: boolean;
+  eyeIcon: boolean;
+  src: string;
+  Heading: string;
+  price: number;
+  oldPrice: number;
+  star: number;
+  reviews: number;
+}
+function ProductCard({loop}: {loop: FlashCardtype[]}) {
   return (
     <>
       {loop.map((items,index)=>{return (
