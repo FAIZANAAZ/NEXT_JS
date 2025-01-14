@@ -23,7 +23,7 @@ export const fetchData =async () => {
             _id: `product-${product.id}`,
             _type: "product",
             // JB HM ID DETY HEN TO HM TYPE bhi dety hen isy ye wo wali id get kryga jo sanity hmy bna kr deta he
-            title: product.title,
+            name: product.title,
             discountPercentage: product.discountPercentage || 0,
             price: product.price,
             description: product.description,
@@ -49,6 +49,7 @@ export const fetchData =async () => {
         await client.createOrReplace(productElement);
         
     }
+    await Promise.all(data)
   }catch(error){
     console.error('Error uploading products:', error);
   }

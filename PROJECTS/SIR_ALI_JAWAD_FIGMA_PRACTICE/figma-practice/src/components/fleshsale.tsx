@@ -11,7 +11,7 @@ import { fetchData } from '@/service/api'
 // import { fetchData } from '@/service/api'
 interface SanityProduct {
   _id: Number
-  name: string;
+  title: string;
   description: string;
   price: number;
   discountPercentage: number;
@@ -31,7 +31,7 @@ const FlashSale = () => {
     useEffect(() => {
       const fetchProducts = async () => {
         const products = await client.fetch(`*[_type == "product" ][]{
-          name,
+          title,
           description,
           price,
           discountPercentage,
@@ -44,7 +44,7 @@ const FlashSale = () => {
         }
       `);
       const mappedProducts = products.map((product: SanityProduct) => ({
-        Heading: product.name, // `name` ko `Heading` assign kiya
+        Heading: product.title, // `name` ko `Heading` assign kiya
         description: product.description,
         price: product.price,
         discountPrice: product.discountPercentage,
@@ -56,11 +56,11 @@ const FlashSale = () => {
         sizes: product.sizes
       }));
         setCard(mappedProducts);
-        if (!products || products.length === 0) {
+        if (!products || products.length === 0 ) {
           await fetchData();
   
           const products = await client.fetch(`*[_type == "product" ][]{
-            name,
+            title,
             description,
             price,
             discountPercentage,
@@ -146,7 +146,7 @@ const FlashSale = () => {
     </div>
               {/* Cards Div */}
            <div>   <div className='w-[1308px]   mt-[40px] flex gap-[30px] overflow-x-auto  '>
-           <ProductCard key={20} loop={Card}/>
+           <ProductCard loop={Card}/>
         </div>
         <div className='text-center mt-[60px]'>
           
