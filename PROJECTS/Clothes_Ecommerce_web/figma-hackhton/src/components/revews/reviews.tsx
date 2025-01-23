@@ -52,7 +52,7 @@ const updateReview = async (id: string, review: Partial<Review>): Promise<Review
   })
 }
 
-const deleteReview = async (id: string): Promise<void> => {
+const deleteReview = async (): Promise<void> => {
   // Simulating API call
   return new Promise((resolve) => {
     setTimeout(resolve, 500)
@@ -126,7 +126,7 @@ export default function ReviewsSection() {
 
   const handleDelete = async (id: string) => {
     try {
-      await deleteReview(id)
+      await deleteReview()
       setReviews((prevReviews) => prevReviews.filter((review) => review._id !== id))
       toast.success("Review deleted successfully")
     } catch (error) {
