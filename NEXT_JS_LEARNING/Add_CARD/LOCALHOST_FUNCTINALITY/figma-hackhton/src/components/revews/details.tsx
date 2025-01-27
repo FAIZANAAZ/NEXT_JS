@@ -143,9 +143,11 @@ export default function ProductDetail({ cardid }: { cardid: number }) {
                     <Plus className="w-4 h-4" />
                   </Button>
                 </div>
-                <Link href={`/Addcard?name=${cardData.name}&price=${cardData.price}&picture=${cardData.picture}&size=${selectedSize}&color=${selectedColor}&id=${cardData.id}&quantity=${quantity}`}> <Button className="h-12 px-12 rounded-[40px] w-full  text-white hover:bg-black/90">
-                  Add to Cart
-                </Button></Link>
+                <Link href={`/Addcard?name=${cardData.name}&price=${cardData.price}&picture=${cardData.picture}&size=${selectedSize}&color=${selectedColor}&id=${cardData.id}&quantity=${quantity}`}>
+  <Button className="h-12 px-12 rounded-[40px] w-full  text-white hover:bg-black/90">
+    Add to Cart
+  </Button>
+</Link>
               </div>
             </div></>)}
       </div>

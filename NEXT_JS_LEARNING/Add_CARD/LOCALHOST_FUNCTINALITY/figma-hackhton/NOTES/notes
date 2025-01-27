@@ -1,0 +1,7 @@
+(1)sbsy phly link krwaygy add to card pr click krny pr jha wo chala jayga add to card waly page pr 
+(2)phir linke me search params ak use krky oska data bhjengy link ke zariye add to card waly rout pr
+(3)phir add to card waly rout sy chizen bahir lekr aygy saerch param sy ya useparaam sy 
+(4) phir sari chizon ko nikalengy is trha agr useparam use kiya he use client ki wja sy 
+    
+      const searchParams = useSearchParams()
+     

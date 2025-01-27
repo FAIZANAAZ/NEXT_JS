@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Star, MoreVertical, CheckCircle2, Edit2, Trash2 } from "lucide-react"
+import { Star, CheckCircle2, Edit2, Trash2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface ReviewCardProps {

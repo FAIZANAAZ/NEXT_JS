@@ -3,10 +3,6 @@
 
 import Card from "../cards"
 
-
-
-
-
 export default function ProductFilterColor() {
 
 
