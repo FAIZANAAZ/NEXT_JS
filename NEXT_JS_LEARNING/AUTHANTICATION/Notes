@@ -1,0 +1,214 @@
+/* (1)open (https://clerk.com/) => (2)click on dashboard 
+(2)continue with google
+(3)wo dashboard pr le jayga hm user pr click krengy
+
+(4)vs code me ayngy ak rout bnaygy app me 
+
+(5) broser pr jaygy open (https://clerk.com/nextjs-authentication) 
+(6)click explore the docs
+(7)left side pr next js pr click krky drop down menu ko open krengy => click on Add a custom sign-in-or-up page   =>copy folder ka name 
+
+(8)vs code pr aygy ak or rout bnaygy app me folder ka name (sign-in/[[...sign-in]]) hoga osky ander page.tsx ki file ..thora or nichy jaygy web me 
+
+(9)or page.tsx me past krengy (import { SignIn } from '@clerk/nextjs'
+
+export default function Page() {
+  return <SignIn />
+})      or ye hmy mil jayga web me bhi jha hm next js pr click krky or ander jaygy menu ke zariye
+
+(10)run (npm i @clerk/nextjs) in terminal
+
+(11)thora or web site pr nichy jaengy wha milyga middleware.ts file ke name ko copy krengy or src me bnaygy file name (middleware.ts)
+
+(12)or web sy code copy krlengy middleware.ts me past krdengy
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
+
+const isPublicRoute = createRouteMatcher(['/sign-in(.*)'])
+
+export default clerkMiddleware(async (auth, request) => {
+  if (!isPublicRoute(request)) {
+    await auth.protect()
+  }
+})
+
+export const config = {
+  matcher: [
+    // Skip Next.js internals and all static files, unless found in search params
+    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    // Always run for API routes
+    '/(api|trpc)(.*)',
+  ],
+}
+
+(13)web ko thora or nichy krengy or update your envornment variable wha sy copy krengy (NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in) or past krengy env.local me
+
+(14)phir whi jo hmny dashbrd pr user ka tab open kiya howa tha ospr jaengy or overview ka tab open krengy 
+
+(15)wha bhi env.local me sy keys hongi osko copy krengy or past krengy env.local me (NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="yha key past krni he")
+
+(16)open main layout file or osmy html ke tage ko nichy tk cut krky
+ <ClerkProvider >html</ClerkProvider >
+ me rakh dengy or import krwa dengy oper 
+   ( import { ClerkProvider } from '@clerk/nextjs')
+
+ (17) phir sign in ka page open higa localhost3000 pr signin ka page nazr ayga kioky hmary web me sirf abhi wahi publick he baqi sb page private hen sbsy phly src/sign-in/[[...sign-in]] pr jaengy or signin page ko css dekr hm center me krengy
+ 
+ (18)kioky midleware me hmny sirf singnin ko hi rkha he ispublik ke array me to wo kisi bhi rout pr jany nhi dega lekin hm jisko chaahy os array me add kr skty hen wo publick ho jayga or jisko add nhi krengy ospr wo phly sign in ka khy ga 
+ const isPublicRoute = createRouteMatcher(['/sign-in(.*)','/',"/studio(.*)"]) 
+ ismy hmny / add kiya he isy home page wo show krdyga user ko baqi page pr nhi jany dega
+ 
+ **agr hm apny dynamic page ko krty hen public to oska or array me add krty hen /product/id or hmny usme use kiya he searchparams ko to url /product/id esa to nhi hoga eo to bhut bara hoga to hm osky agy lga dengy /product/id(.*) isy wo osky agy ki sb chizen accept kryga 
+
+ url exitise wohi hona chiye jo kisi rout pr click krny sy url web pr oper bnta he jesy hm /id nhi likhengy /product/id likhengy 
+
+ (19)ab hm header me apna icon lgaygy dpka google ki jesy nazr ata he aksr chota sa kony pr jb hm kisi chiz ko signin krty hen choti si dp hmary google ki 
+    
+ **jha icon likhna hoga wha rakhengy   <UserButton/> or import krwaygy 
+**import { UserButton } from "@clerk/nextjs"
+**or phly signin pr jakr continue with google krengy phir wo icon show hoga 
+**or ospr click krky signout bhi kr skty hen or phir dobara sign in krna pryga 
+
+
+(20)ab hm clerkke dashbord pr jaegy user ka tab me jaengy to jo user login kryga oskiid wha show hori hogi yani clerk store krta he user ka data dashbord me
+
+(21)os user pr jb hm click krengy to oski full profile open ho jaygi  jha ak userid bani hogi user ki jo clerk bnata he 
+
+**ab hm nikalengy user data ko  clerk sy or osko dalengy sanity me
+
+(22)sanity pr dany ke liye service ke folder me ak ts ki file bnaygy /api.ts kisi bhi name sy or osmy is trha PAST  krengy 
+   ***("use server"
+
+import { client } from "@/sanity/lib/client";
+import {auth, currentUser} from "@clerk/nextjs/server"
+
+const getUserFromClerk = async () => {
+ 
+   const {userId} =await auth()
+   const user= await currentUser();
+const userName = `user_${user?.firstName} ${user?.lastName}`
+const userEmail = user?.externalAccounts[0].emailAddress
+const userImage = user?.imageUrl
+
+return {userName, userEmail, userImage , userId}
+   
+}
+
+export default getUserFromClerk
+
+export async function sanityPostUserData() {
+     const {userName, userEmail, userImage, userId} = await getUserFromClerk();
+
+   const useObject ={
+      _type:"user",
+      name:userName,
+      _id:`user-${userId}`,
+      email:userEmail,
+      id:userId,
+      image:userImage
+     
+   }
+
+  const res = client.createOrReplace(useObject)
+})
+
+**ismy jo useobject he wo hm apny schema ke hisab sy bnaygy or vision sy othaygy sanity ke
+
+   (23)ab isko hm chalaengy wha pr jha hm user ko sign in ke liye bhejry hen jesy dynamic page pr bs ak hi jjha chalana he 
+
+
+(24)ak schema bnay gy (export default {
+  name: 'user',
+  type: 'document',
+  title: 'User',
+  fields: [
+    {
+      name: 'id',
+      type: 'string',
+      title: 'ID',
+      readOnly: true
+    },
+    {
+      name: 'name',
+      type: 'string',
+      title: 'Name',
+
+    },
+    {
+      name: 'email',
+      type: 'string',
+      title: 'Email',
+  
+    },
+    {
+      name: 'password',
+      type: 'string',
+      title: 'Password',
+      hidden: true
+    },
+  //   {
+  //     name: 'role',
+  //     type: 'string',
+  //     title: 'Role',
+  //     options: {
+  //       list: [
+  //         { title: 'User', value: 'user' },
+  //         { title: 'Admin', value: 'admin' }
+  //       ]
+  //     },
+  //     initialValue: 'user'
+  //   },
+    {
+      name: 'image',
+      type: 'image',
+      title: 'Profile Image',
+      options: {
+        hotspot: true
+      }
+    }
+  ]
+};
+
+)   
+
+(25)confirm krygy studio ke rout pr jakr ke aya fields ya nhi 
+
+(26)
+
+//////////////////////$
+
+ (1)hm ab admin ko auther bnaygy taky wo ja sky bs dashbord pr 
+ (2)wo hm esy krengy dashbord pr jaygy clerk ke wha bhut sary user ary hongy jis jis ne login kiya he osmy jisko admint bnana he oski profile pr click krengy or nichy jaygy metadata me jakr public edit pr click krengy or osmy example:data ko hta kr ("role" : "admin") likh dengy jiski profile pr admin krengy wo admin bn jayga admin
+
+ (3)  ak admin ke name sy rout bnaygy app me or past krengy
+ **(((("use client"
+ import React, { useEffect } from 'react'
+ import {useUser} from '@clerk/nextjs'
+ import { useRouter } from 'next/navigation'
+ const AdminRoute = () => {
+     const {isLoaded,user}=useUser()
+     const router = useRouter()
+     useEffect(() => {
+     if(isLoaded ){
+         // isloaded ka matlb ye he ke user ke data load ho chuka he yani phly load hony do phir agy brho
+       const role =(user?.publicMetadata as {role?:string})?.role
+      
+       if(role!=="admin" ||!user){
+         // user hi he yani esa user jisny signin hi nhi kiya or admint ke rout pr jara he url ke zariye or admint bhi nhi he wo to  home pr redirect ho jaye admint pr na jay
+         router.push("/")
+       }
+     }
+     }, [isLoaded,user,router])
+     
+     // isloded matlb abhi wolod kra he or cheq kra he wha ke kon kon he or kon kon admint he
+     // isSignedIn matlb user sign in he ya nhi
+     // user matlb user ke data ko get kra he
+     console.log(user,"😫");
+     
+   return (
+     <div>
+ admin route
+     </div>
+   )
+ }
+ 
+//  export default AdminRoute))))

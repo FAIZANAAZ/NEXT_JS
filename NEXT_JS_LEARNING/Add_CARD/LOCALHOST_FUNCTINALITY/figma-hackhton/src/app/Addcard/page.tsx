@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { Minus, Plus, Trash } from 'lucide-react'
+import {  Trash } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import {  useSearchParams } from "next/navigation"
@@ -38,17 +38,16 @@ const updatedCart = cart ? JSON.parse(cart):[]
 
 const name = searchParams.get('name')
 const size = searchParams.get('size')
-const color = searchParams.get('color')
+const color = searchParams.get('selectedColor')
 const price = searchParams.get('price')
 const image = searchParams.get('picture') 
-const quantity = searchParams.get('quantity')
-const id = searchParams.get('id')
+
 
 // yha hm searh paraam sy apny data ko nikal rhy hen
 
 
 
-console.log("😎",name, size, color, price, image, Number(quantity), Number(id)) 
+console.log("🤩", color) 
 // && color && Number(quantity) && Number(id)
 if (name &&  price && image && size  ) {
   // yhahm likhengy ke sbsy phly to cheq kro ke daya he 
@@ -70,7 +69,7 @@ if (name &&  price && image && size  ) {
   setCartItem(updatedCart)
   console.log(updatedCart,"😊")
   // ismy mojhe ye btara he ke ye bhi apny ander set krly kioky map isi pr to chalra he
-    router.replace('/Addcard')
+    // router.replace('/Addcard')
     // isy wo replace krky saf krdega ak trha sy url me jo itna sara data he 
 }
 

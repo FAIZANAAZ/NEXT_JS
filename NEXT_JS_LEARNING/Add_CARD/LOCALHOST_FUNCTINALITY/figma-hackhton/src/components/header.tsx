@@ -15,6 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { UserButton } from "@clerk/nextjs"
 
 export default function Header() {
   const [showBanner, setShowBanner] = React.useState(true)
@@ -27,9 +28,7 @@ export default function Header() {
           <div className="container mx-auto px-4  flex justify-end md:gap-[500px]  items-center">
             <div className="flex gap-2 text-[12px] md:text-[14px] mx-auto  sm:mx-0">
               <span>Sign up and get 20% off to your first order.</span>
-              <Link href="/" className="hover:underline">
-                Sign Up Now
-              </Link>
+            
             </div>
             <Button
               variant="ghost"
@@ -178,13 +177,9 @@ export default function Header() {
               >
                <Link href={"/Addcard"}> <FiShoppingCart className="w-5 h-5" /></Link>
               </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                aria-label="Account"
-              >
-                <FaRegUserCircle className="w-5 h-5" />
-              </Button>
+              <Link href="/" className="hover:underline">
+              <UserButton/>
+              </Link>
             </div>
           </div>
         </div>

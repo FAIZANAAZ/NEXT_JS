@@ -1,0 +1,27 @@
+(1)("cypress:open": "cypress open", )in packagr.json inside script
+(2)run (npm install -D cypress) in terminal to install cypress
+(3)run (npm run cypress:open) in terminal to run cypress
+   ak window open hogi osmy => continue krengy
+   =>es2 testing =>continue => than start est testing  
+(4)chack  cypress.config.ts ki file bni he ya nhi
+(5)  jo window open hoi wi hogi cypress ki osmy click krengy (create new spec)pr wo ak pasward mangyga osmy likhengy (cypress\e2e\navigation.cy.ts) 
+(6)(Great! The spec was successfully added) ki ak window pen hogi => click on (Okay, run the spec)
+(7)cypress.config.ts ki file me sb remove krky  past krengy =>(const { defineConfig } =require( "cypress")
+
+module.exports= defineConfig({
+ 
+  e2e: {
+     baseUrl: 'http://localhost:3000',
+    setupNodeEvents(on:any, config:any) {
+      // implement node event listeners here
+    },
+  },
+});
+)
+
+(8)open cypress =>e2e =>navigation.cy.ts   ye right side pr bna howa hoga 
+   osmy https url ko remove krengy or oski jha likhengy home yani ("/")
+   or template spec ko mita kr (navigation tests)
+
+(9)phir wahi cypree wali window open krengy navigation.cy.ts pr click krengy hmara home page open ho jayga npm run dev hona chiye 
+(10)

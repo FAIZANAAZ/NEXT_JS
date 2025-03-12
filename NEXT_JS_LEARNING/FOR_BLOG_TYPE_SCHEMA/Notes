@@ -1,0 +1,23 @@
+BLOG TYPE KE LIYE HM USE KRTY HE PORTABLE TEXT isy ye hoga ke jis trha hm blog schema me likhengy wo wesy hi ayga jesy h1 agr likhen to wo h1 hi lekr ayga lekin bad me hmy osko acces bhi krna hota he wrna wo nrmal text ki trha a jayga 
+
+(1)npm i @portabletext/react
+(2)import { PortableText } from '@portabletext/react';
+(3)schema (title name description ya blog )wesy hi ayga extera (type :array,of [{type: 'block'}]) likhna hota he
+(4) <PortableText value={card_result.description} />
+card_result.description matlb wahi jo data hm schema sy fetch krna
+
+(5)agr hmy koch changing krni he h2 wagera me to hm map lgaygy kioky wo ak array hota he 
+     
+{data.description.map((content, index) => (
+    <div
+      key={index}
+      className={`mt-8 w-full px-4  flex flex-col gap-2   ${
+        index === 0 ? "text-center hidden  text-[40px] font-bold" : ""
+       } ${
+        content.children && content.children[0].text === "TL;DR" ? "   text-[40px] font-bold" : ""
+       }  ${content.style=="h2" ? "p-3 text-[#1b1b57] bg-gray-50 text-[30px]   text-center" : "text-white"}`}
+    >
+      <PortableText value={content} />
+    </div>
+  ))}
+

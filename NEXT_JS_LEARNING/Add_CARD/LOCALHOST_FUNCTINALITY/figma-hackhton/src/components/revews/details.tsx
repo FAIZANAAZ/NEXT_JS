@@ -15,7 +15,7 @@ const colors = ['#4f4631', '#314f4a', '#6e2c7d'] // Brown, Black, Gray
 export default function ProductDetail({ cardid }: { cardid: number }) {
   const cardData = dynamic.find((item) => item.id == cardid);
   const [selectedSize, setSelectedSize] = useState('Medium')
-  const [selectedColor, setSelectedColor] = useState(colors[0])
+  const [selectedColor, setSelectedColor] = useState("#4f4631")
   const [quantity, setQuantity] = useState(1)
 
   return (
@@ -143,7 +143,7 @@ export default function ProductDetail({ cardid }: { cardid: number }) {
                     <Plus className="w-4 h-4" />
                   </Button>
                 </div>
-                <Link href={`/Addcard?name=${cardData.name}&price=${cardData.price}&picture=${cardData.picture}&size=${selectedSize}&color=${selectedColor}&id=${cardData.id}&quantity=${quantity}`}>
+                <Link href={`/Addcard?name=${cardData.name}&price=${cardData.price}&picture=${cardData.picture}&size=${selectedSize}&selectedColor=${selectedColor} &id=${cardData.id}&quantity=${quantity}`}>
   <Button className="h-12 px-12 rounded-[40px] w-full  text-white hover:bg-black/90">
     Add to Cart
   </Button>

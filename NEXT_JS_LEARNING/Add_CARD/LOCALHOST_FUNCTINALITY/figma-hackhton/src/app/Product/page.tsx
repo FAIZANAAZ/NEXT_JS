@@ -1,10 +1,13 @@
-
-import ReviewsSection from '@/components/revews/reviews'
-import Detailcards from '@/components/revews/detsilcards'
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import ProductFilterColor from '@/components/filtertsx/colorfilter'
+import sanityPostUserData from '@/service/userapicler'
 
 const Review = () => {
+  useEffect(() => {
+    sanityPostUserData();
+  },[])
+  
   return (
     <div>
      <div className='md:px-[100px]  '>
