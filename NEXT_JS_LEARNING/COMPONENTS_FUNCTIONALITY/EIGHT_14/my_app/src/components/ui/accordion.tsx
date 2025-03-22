@@ -25,6 +25,9 @@ function AccordionItem({
   )
 }
 
+// AccordionPrimitive.Root Radix UI ka built-in component hai jo accordion ko control karta hai.
+// {...props} iska matlab hai ki jo bhi extra properties aayengi wo isme automatically add ho jayengi.
+
 function AccordionTrigger({
   className,
   children,
@@ -46,6 +49,14 @@ function AccordionTrigger({
     </AccordionPrimitive.Header>
   )
 }
+
+// className ko dynamically use kiya gaya hai
+
+// Tum extra styles pass kar sakte ho (e.g., className="text-red-500" pass karne se text red ho jayega).
+// 2️⃣ children ka use kiya gaya hai
+// children ka matlab hai jo bhi text ya content hum AccordionTrigger ke andar likhenge, wo yahan show hoga.
+// 3️⃣ ...props ka use
+// Iska matlab hai ki koi bhi extra attribute pass kiya ja sake (e.g., onClick, id, etc.)
 
 function AccordionContent({
   className,

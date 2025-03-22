@@ -5,6 +5,7 @@ import type { UserProfile } from "@/types"
 
 interface AuthContextType {
   user: UserProfile | null
+  // ye profile wala hm type sy othary hen interface
   signIn: () => void
   signOut: () => void
   isLoading: boolean
@@ -16,8 +17,14 @@ const AuthContext = createContext<AuthContextType>({
   signOut: () => {},
   isLoading: true,
 })
+// phly hmbody bnaty hen create context me phir osko use context me rkhty hen taky wo har jga golbaly acce ho sky
+
+// createContext React ka built-in function hai jo ek context banata hai.
+// Yahan, hum default values provide kar rahe hain jo context me use hoti hain. Jab tak actual values set nahi hoti, tab tak default values ka use hota hai.
+
 
 export const useAuth = () => useContext(AuthContext)
+// hmny isy rakh diya use oth me tky hjb bhi data accces krna ho to hm is hook kause kr skty hen 
 
 interface AuthProviderProps {
   children: ReactNode
@@ -49,6 +56,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         setUser(null)
       } finally {
         setIsLoading(false)
+        // yani jb authonticaltion checking complete ho jaygi to isLoading false kr diya jayga
       }
     }
 

@@ -8,9 +8,12 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { useToast } from "@/hooks/use-toast"
 import { updateUserProfile } from "@/lib/user"
 import type { UserProfile as UserProfileType } from "@/types"
+
+// Jab user "Edit" button par click karta hai, tab setIsEditing(true) hota hai, jo inputs ko editable bana deta hai.
+
+// Jab user "Save" button par click karta hai, tab setIsEditing(false) hota hai, jo changes ko save karne ke baad inputs ko read-only mode mein le aata hai.
 
 interface UserProfileProps {
   user: UserProfileType
@@ -24,16 +27,14 @@ export default function UserProfile({ user }: UserProfileProps) {
   const [bio, setBio] = useState(user.bio || "")
   const [avatar, setAvatar] = useState<string | null>(user.avatar)
   const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const { toast } = useToast()
+// sbsy phly save ko false rkhangy kioky jb koch edit hi nhi howa to phir osmy kiya save krwaygy jb koch edit kryga 
+// user tb osko true krwaygy 
+  
 
   const handleSave = async () => {
     if (!name.trim() || !email.trim()) {
-      toast({
-        title: "Error",
-        description: "Name and email are required.",
-        variant: "destructive",
-      })
+      // Agar name ya email empty hain (ya unmein sirf spaces hain), toh save process ko rok diya jata hai.
+     
       return
     }
 
@@ -49,17 +50,10 @@ export default function UserProfile({ user }: UserProfileProps) {
       })
 
       setIsEditing(false)
-      toast({
-        title: "Profile updated",
-        description: "Your profile has been updated successfully.",
-      })
+      
     } catch (error) {
       console.error("Failed to update profile:", error)
-      toast({
-        title: "Error",
-        description: "Failed to update your profile. Please try again.",
-        variant: "destructive",
-      })
+     
     } finally {
       setIsSubmitting(false)
     }
@@ -70,11 +64,7 @@ export default function UserProfile({ user }: UserProfileProps) {
     if (!file) return
 
     if (file.size > 5 * 1024 * 1024) {
-      toast({
-        title: "File too large",
-        description: "Avatar image must be less than 5MB.",
-        variant: "destructive",
-      })
+     
       return
     }
 
@@ -90,6 +80,7 @@ export default function UserProfile({ user }: UserProfileProps) {
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-semibold">Profile Information</h2>
         {!isEditing ? (
+          // by defalt to ye false he to ye condition chlygi yani edit button ayga jb ye chalygi or edit pr jesy click hoga isediting true ho jayega or condition false ho jaygi jb ye false hogi to save button disply ho ayga
           <Button variant="outline" size="sm" onClick={() => setIsEditing(true)}>
             <Pencil className="h-4 w-4 mr-2" />
             Edit

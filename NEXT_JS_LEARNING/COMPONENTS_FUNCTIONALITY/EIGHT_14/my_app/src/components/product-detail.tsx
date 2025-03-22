@@ -4,7 +4,6 @@ import { useState } from "react"
 import { Heart, Minus, Plus, Share2, ShoppingCart, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { useToast } from "@/hooks/use-toast"
 import { useCart } from "@/hooks/use-cart"
 import { useFavorites } from "@/hooks/use-favorites"
 import type { Product } from "@/types"
@@ -17,26 +16,21 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
   const [quantity, setQuantity] = useState(1)
   const [selectedImage, setSelectedImage] = useState(0)
 
-  const { toast } = useToast()
+ 
   const { addToCart } = useCart()
   const { favorites, toggleFavorite } = useFavorites()
 
   const isFavorite = favorites.includes(product.id)
+  // Ye method check karta hai ke product.id favorites array ke andar mojood hai ya nahi.
 
   const handleAddToCart = () => {
     addToCart(product, quantity)
-    toast({
-      title: "Added to cart",
-      description: `${quantity} ${quantity > 1 ? "items" : "item"} added to your cart.`,
-    })
+   
   }
 
   const handleToggleFavorite = () => {
     toggleFavorite(product.id)
-    toast({
-      title: isFavorite ? "Removed from favorites" : "Added to favorites",
-      description: `${product.name} has been ${isFavorite ? "removed from" : "added to"} your favorites.`,
-    })
+    
   }
 
   const handleShare = () => {
@@ -52,13 +46,11 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         })
     } else {
       navigator.clipboard.writeText(window.location.href)
-      toast({
-        title: "Link copied",
-        description: "Product link copied to clipboard.",
-      })
+      
     }
   }
 
+  // ye sahre krty hen hm jesy oskosupport krta he 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {/* Product Images */}

@@ -60,3 +60,4 @@ function RelatedProductsSkeleton() {
   )
 }
 
+// yani ye images ki jha pr ak placeholder dikhayga jb tk imgesa nhi hen

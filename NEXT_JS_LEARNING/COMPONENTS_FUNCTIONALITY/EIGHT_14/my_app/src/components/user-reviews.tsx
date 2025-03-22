@@ -15,7 +15,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
-import { useToast } from "@/hooks/use-toast"
+
 import { getUserReviews, deleteReview } from "@/lib/reviews"
 import type { UserReview } from "@/types"
 
@@ -28,7 +28,7 @@ export default function UserReviews({ userId }: UserReviewsProps) {
   const [loading, setLoading] = useState(true)
   const [reviewToDelete, setReviewToDelete] = useState<string | null>(null)
 
-  const { toast } = useToast()
+
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -38,18 +38,14 @@ export default function UserReviews({ userId }: UserReviewsProps) {
         setReviews(result)
       } catch (error) {
         console.error("Failed to fetch reviews:", error)
-        toast({
-          title: "Error",
-          description: "Failed to load your reviews. Please try again.",
-          variant: "destructive",
-        })
+       
       } finally {
         setLoading(false)
       }
     }
 
     fetchReviews()
-  }, [userId, toast])
+  }, [userId])
 
   const handleDeleteReview = async () => {
     if (!reviewToDelete) return
@@ -57,17 +53,10 @@ export default function UserReviews({ userId }: UserReviewsProps) {
     try {
       await deleteReview(reviewToDelete)
       setReviews(reviews.filter((review) => review.id !== reviewToDelete))
-      toast({
-        title: "Review deleted",
-        description: "Your review has been deleted successfully.",
-      })
+     
     } catch (error) {
       console.error("Failed to delete review:", error)
-      toast({
-        title: "Error",
-        description: "Failed to delete your review. Please try again.",
-        variant: "destructive",
-      })
+      
     } finally {
       setReviewToDelete(null)
     }

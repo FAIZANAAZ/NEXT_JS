@@ -5,7 +5,7 @@ import Link from "next/link"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { useToast } from "@/hooks/use-toast"
+
 import { getRelatedProducts } from "@/lib/products"
 import type { Product } from "@/types"
 
@@ -19,7 +19,7 @@ export default function RelatedProducts({ currentProductId, category }: RelatedP
   const [loading, setLoading] = useState(true)
   const [scrollPosition, setScrollPosition] = useState(0)
 
-  const { toast } = useToast()
+
 
   useEffect(() => {
     const fetchRelatedProducts = async () => {
@@ -29,18 +29,14 @@ export default function RelatedProducts({ currentProductId, category }: RelatedP
         setProducts(result)
       } catch (error) {
         console.error("Failed to fetch related products:", error)
-        toast({
-          title: "Error",
-          description: "Failed to load related products.",
-          variant: "destructive",
-        })
+        
       } finally {
         setLoading(false)
       }
     }
 
     fetchRelatedProducts()
-  }, [currentProductId, category, toast])
+  }, [currentProductId, category])
 
   const scroll = (direction: "left" | "right") => {
     const container = document.getElementById("related-products-container")
@@ -60,6 +56,7 @@ export default function RelatedProducts({ currentProductId, category }: RelatedP
     setScrollPosition(newPosition)
   }
 
+  // loading true hai: Toh ek placeholder (empty card with loading animation) dikhayi degi.
   if (loading) {
     return (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -84,8 +81,8 @@ export default function RelatedProducts({ currentProductId, category }: RelatedP
 
   return (
     <div className="relative">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold">Related Products</h3>
+      <div className="flex items-center justify-between bg-white mb-4">
+        <h3 className="text-lg font-semibold"></h3>
         <div className="flex space-x-2">
           <Button variant="outline" size="icon" onClick={() => scroll("left")} disabled={scrollPosition === 0}>
             <ChevronLeft className="h-4 w-4" />

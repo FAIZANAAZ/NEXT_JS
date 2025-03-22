@@ -5,7 +5,6 @@ import { Star, ThumbsDown, ThumbsUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useToast } from "@/hooks/use-toast"
 import { useAuth } from "@/hooks/use-auth"
 import { getReviews, addReview, voteReview } from "@/lib/reviews"
 import type { Review } from "@/types"
@@ -21,8 +20,11 @@ export default function ReviewsSection({ productId }: ReviewsSectionProps) {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const [sortBy, setSortBy] = useState<string>("newest")
 
-  const { toast } = useToast()
   const { user, signIn } = useAuth()
+
+  const toast = (message: string) => {
+    console.log(message); // Placeholder for toast implementation
+  };
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -31,33 +33,21 @@ export default function ReviewsSection({ productId }: ReviewsSectionProps) {
         setReviews(result)
       } catch (error) {
         console.error("Failed to fetch reviews:", error)
-        toast({
-          title: "Error",
-          description: "Failed to load reviews. Please try again.",
-          variant: "destructive",
-        })
+        toast("Failed to load reviews. Please try again.")
       }
     }
 
     fetchReviews()
-  }, [productId, sortBy, toast])
+  }, [productId, sortBy])
 
   const handleSubmitReview = async () => {
     if (!user) {
-      toast({
-        title: "Login required",
-        description: "Please login to submit a review.",
-        variant: "destructive",
-      })
+      toast("Please login to submit a review.")
       return
     }
 
     if (!reviewText.trim()) {
-      toast({
-        title: "Review required",
-        description: "Please enter your review.",
-        variant: "destructive",
-      })
+      toast("Please enter your review.")
       return
     }
 
@@ -73,17 +63,10 @@ export default function ReviewsSection({ productId }: ReviewsSectionProps) {
       setReviewText("")
       setUserRating(5)
 
-      toast({
-        title: "Review submitted",
-        description: "Thank you for your review!",
-      })
+      toast("Thank you for your review!")
     } catch (error) {
       console.error("Failed to submit review:", error)
-      toast({
-        title: "Error",
-        description: "Failed to submit your review. Please try again.",
-        variant: "destructive",
-      })
+      toast("Failed to submit your review. Please try again.")
     } finally {
       setIsSubmitting(false)
     }
@@ -91,11 +74,7 @@ export default function ReviewsSection({ productId }: ReviewsSectionProps) {
 
   const handleVote = async (reviewId: string, voteType: "up" | "down") => {
     if (!user) {
-      toast({
-        title: "Login required",
-        description: "Please login to vote on reviews.",
-        variant: "destructive",
-      })
+      toast("Please login to vote on reviews.")
       return
     }
 
@@ -105,11 +84,7 @@ export default function ReviewsSection({ productId }: ReviewsSectionProps) {
       setReviews(reviews.map((review) => (review.id === reviewId ? updatedReview : review)))
     } catch (error) {
       console.error("Failed to vote on review:", error)
-      toast({
-        title: "Error",
-        description: "Failed to register your vote. Please try again.",
-        variant: "destructive",
-      })
+      toast("Failed to register your vote. Please try again.")
     }
   }
 

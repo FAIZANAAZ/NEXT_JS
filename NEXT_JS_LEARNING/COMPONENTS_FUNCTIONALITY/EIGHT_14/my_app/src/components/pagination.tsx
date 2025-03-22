@@ -12,6 +12,7 @@ interface PaginationProps {
 export default function Pagination({ currentPage, totalPages }: PaginationProps) {
   const router = useRouter()
   const pathname = usePathname()
+  // isy current path ata he 
   const searchParams = useSearchParams()
 
   const createPageURL = (pageNumber: number | string) => {
@@ -29,9 +30,11 @@ export default function Pagination({ currentPage, totalPages }: PaginationProps)
     // Always show first page
     pageNumbers.push(1)
 
+    // Yahan, hum pehle page (page 1) ko pageNumbers array mein daal rahe hain. Hum hamesha first page ko dikhayenge, chahe current page jo bhi ho.
+
     // Add ellipsis if needed
     if (currentPage > 3) {
-      pageNumbers.push("ellipsis1")
+      pageNumbers.push("ellipsis1") //ye yani ...
     }
 
     // Add pages around current page
@@ -39,6 +42,12 @@ export default function Pagination({ currentPage, totalPages }: PaginationProps)
       pageNumbers.push(i)
     }
 
+
+//     Agar currentPage = 4 hai aur totalPages = 10, to:
+
+// Math.max(2, currentPage - 1) = Math.max(2, 3) => Yeh 3 dega.
+// Math.min(totalPages - 1, currentPage + 1) = Math.min(9, 5) => Yeh 5 dega.
+// Toh, yeh loop page numbers ko 3, 4, 5 display karega, jo current page ke aas paas hain.
     // Add ellipsis if needed
     if (currentPage < totalPages - 2) {
       pageNumbers.push("ellipsis2")

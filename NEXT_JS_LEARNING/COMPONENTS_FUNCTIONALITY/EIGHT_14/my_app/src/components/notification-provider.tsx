@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect, type ReactNode } from "react"
-import { useToast } from "@/hooks/use-toast"
 import { NotificationContext } from "@/lib/notification-context"
 import type { Notification } from "@/types"
 import { getNotifications, markNotificationAsRead } from "@/lib/notification"
@@ -12,7 +11,7 @@ interface NotificationProviderProps {
 
 export default function NotificationProvider({ children }: NotificationProviderProps) {
   const [notifications, setNotifications] = useState<Notification[]>([])
-  const { toast } = useToast()
+ 
 
   useEffect(() => {
     const fetchNotifications = async () => {
@@ -42,11 +41,7 @@ export default function NotificationProvider({ children }: NotificationProviderP
       )
     } catch (error) {
       console.error("Failed to mark notification as read:", error)
-      toast({
-        title: "Error",
-        description: "Failed to mark notification as read.",
-        variant: "destructive",
-      })
+      
     }
   }
 
@@ -61,17 +56,10 @@ export default function NotificationProvider({ children }: NotificationProviderP
         })),
       )
 
-      toast({
-        title: "Success",
-        description: "All notifications marked as read.",
-      })
+     
     } catch (error) {
       console.error("Failed to mark all notifications as read:", error)
-      toast({
-        title: "Error",
-        description: "Failed to mark all notifications as read.",
-        variant: "destructive",
-      })
+      
     }
   }
 

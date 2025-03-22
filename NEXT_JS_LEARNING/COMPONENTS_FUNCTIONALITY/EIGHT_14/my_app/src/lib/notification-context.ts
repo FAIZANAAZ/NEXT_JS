@@ -18,3 +18,7 @@ export const NotificationContext = createContext<NotificationContextType>({
   markAllAsRead: async () => {},
 })
 
+// Yeh code ek NotificationContext banata hai jisme notifications ka data aur actions store hote hain.
+// NotificationContextType interface se hum define karte hain ke context mein kis type ka data store hoga (notifications, unread count, etc.).
+// createContext ka use karke hum NotificationContext banate hain jisme default values hoti hain.
+// Aap NotificationContext ko apne components mein easily access kar sakte hain, aur notifications ko manage kar sakte hain.

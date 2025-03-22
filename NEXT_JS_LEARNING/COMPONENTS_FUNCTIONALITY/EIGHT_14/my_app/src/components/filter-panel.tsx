@@ -18,7 +18,8 @@ export default function FilterPanel() {
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000])
   const [sort, setSort] = useState<string>("featured")
 
-  // Initialize filters from URL
+  // // Initialize filters from URL
+  // useEffect ek hook hai jo page load hone par categories ko fetch karta hai aur jo filters URL se diye gaye hain unko apply karta hai.
   useEffect(() => {
     if (!searchParams) return
 

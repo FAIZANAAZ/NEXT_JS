@@ -3,7 +3,6 @@ import { AuthProvider } from "@/hooks/use-auth"
 import { CartProvider } from "@/hooks/use-cart"
 import { FavoritesProvider } from "@/hooks/use-favorites"
 import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/components/ui/toaster"
 import "@/app/globals.css"
 
 export default function RootLayout({
@@ -19,7 +18,7 @@ export default function RootLayout({
             <CartProvider>
               <FavoritesProvider>
                 {children}
-                <Toaster />
+                
               </FavoritesProvider>
             </CartProvider>
           </AuthProvider>

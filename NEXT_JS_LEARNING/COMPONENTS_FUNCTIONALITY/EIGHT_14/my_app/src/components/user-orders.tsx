@@ -5,7 +5,6 @@ import Link from "next/link"
 import { ChevronDown, ChevronUp, ExternalLink, Package } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { useToast } from "@/hooks/use-toast"
 import type { Order } from "@/types"
 import { getUserOrders } from "@/lib/order"
 
@@ -18,7 +17,6 @@ export default function UserOrders({ userId }: UserOrdersProps) {
   const [loading, setLoading] = useState(true)
   const [expandedOrder, setExpandedOrder] = useState<string | null>(null)
 
-  const { toast } = useToast()
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -28,22 +26,26 @@ export default function UserOrders({ userId }: UserOrdersProps) {
         setOrders(result)
       } catch (error) {
         console.error("Failed to fetch orders:", error)
-        toast({
-          title: "Error",
-          description: "Failed to load your orders. Please try again.",
-          variant: "destructive",
-        })
+       
       } finally {
         setLoading(false)
       }
     }
 
     fetchOrders()
-  }, [userId, toast])
+  }, [userId])
 
   const toggleOrderExpand = (orderId: string) => {
     setExpandedOrder(expandedOrder === orderId ? null : orderId)
   }
+
+
+//   toggleOrderExpand Function ka Kaam
+// Yeh function ek order ka expanded view ko toggle (switch) karta hai. Matlab:
+
+// Jab user kisi order par click karega, toh wo order ka detailed view (items, shipping address, etc.) show karega ya hide karega.
+
+// Expanded ka matlab hai order ka detailed view dikhana, aur collapsed ka matlab hai detailed view ko chhupana.
 
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {

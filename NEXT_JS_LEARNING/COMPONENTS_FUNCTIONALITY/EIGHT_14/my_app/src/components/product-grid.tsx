@@ -6,7 +6,7 @@ import { Heart, ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { useToast } from "@/hooks/use-toast"
+
 import { useCart } from "@/hooks/use-cart"
 import { useFavorites } from "@/hooks/use-favorites"
 import { useSearchParams } from "next/navigation"
@@ -26,7 +26,7 @@ export default function ProductGrid() {
   const maxPrice = searchParams ? searchParams.get("maxPrice") : null
   const sort = searchParams ? searchParams.get("sort") : null
 
-  const { toast } = useToast()
+
   const { addToCart } = useCart()
   const { favorites, toggleFavorite } = useFavorites()
 
@@ -46,35 +46,23 @@ export default function ProductGrid() {
         setTotalPages(result.totalPages)
       } catch (error) {
         console.error("Failed to fetch products:", error)
-        toast({
-          title: "Error",
-          description: "Failed to load products. Please try again.",
-          variant: "destructive",
-        })
+       
       } finally {
         setLoading(false)
       }
     }
 
     fetchProducts()
-  }, [page, category, minPrice, maxPrice, sort, toast])
+  }, [page, category, minPrice, maxPrice, sort])
 
   const handleAddToCart = (product: Product) => {
     addToCart(product)
-    toast({
-      title: "Added to cart",
-      description: `${product.name} has been added to your cart.`,
-    })
+    
   }
 
   const handleToggleFavorite = (product: Product) => {
     toggleFavorite(product.id)
-    toast({
-      title: favorites.includes(product.id) ? "Removed from favorites" : "Added to favorites",
-      description: `${product.name} has been ${
-        favorites.includes(product.id) ? "removed from" : "added to"
-      } your favorites.`,
-    })
+    
   }
 
   if (loading) {

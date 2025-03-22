@@ -1,8 +1,15 @@
 "use client"
 
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
-import { useToast } from "@/hooks/use-toast"
+import { toast } from "sonner"
 import type { Product } from "@/types"
+
+
+// createcontext ko hm isi liye use krty hen data apna store krny ke liye ke hm jo hook bnaty hen osmy kiya kiya chizen ay gi osky liye phly hmy ak interface bnana hota he
+// phir os interface ka use krky hm ak body bnaty hen creatcontext ke ander jo jochizen aygi filhal khali rkhty hen 
+
+// usecontext ka use hm isi liye krty hen ke hm osy gobaly har componet me use kr sky bahir or usmy hm creatcontext ko rakhty hen
+// or end me hm (component_name).provider me bhi name pass kr dety hen ke kiya kiya chizen ya functs hen phir wo acces ke kabil ho jata he har jha
 
 interface CartItem extends Product {
   quantity: number
@@ -30,13 +37,13 @@ const CartContext = createContext<CartContextType>({
 
 export const useCart = () => useContext(CartContext)
 
+// yha tk ka kam bs osko globaly set krna tha ab agy kam start hoga body fill krny ka
 interface CartProviderProps {
   children: ReactNode
 }
 
 export function CartProvider({ children }: CartProviderProps) {
   const [items, setItems] = useState<CartItem[]>([])
-  const { toast } = useToast()
 
   // Load cart from localStorage on initial render
   useEffect(() => {
@@ -67,14 +74,25 @@ export function CartProvider({ children }: CartProviderProps) {
         return [...prevItems, { ...product, quantity }]
       }
     })
+
+    // Add toast notification when item is added to cart
+    toast(`${product.name} has been added to your cart.`, {
+      description: "Item added",
+    })
   }
 
   const removeFromCart = (productId: string) => {
-    setItems((prevItems) => prevItems.filter((item) => item.id !== productId))
+    setItems((prevItems) => {
+      const itemToRemove = prevItems.find((item) => item.id === productId)
+      const filteredItems = prevItems.filter((item) => item.id !== productId)
 
-    toast({
-      title: "Item removed",
-      description: "The item has been removed from your cart.",
+      if (itemToRemove) {
+        toast("The item has been removed from your cart.", {
+          description: "Item removed",
+        })
+      }
+
+      return filteredItems
     })
   }
 
@@ -85,14 +103,18 @@ export function CartProvider({ children }: CartProviderProps) {
     }
 
     setItems((prevItems) => prevItems.map((item) => (item.id === productId ? { ...item, quantity } : item)))
+
+    // Add toast notification when quantity is updated
+    toast("The item quantity has been updated in your cart.", {
+      description: "Quantity updated",
+    })
   }
 
   const clearCart = () => {
     setItems([])
 
-    toast({
-      title: "Cart cleared",
-      description: "All items have been removed from your cart.",
+    toast("All items have been removed from your cart.", {
+      description: "Cart cleared",
     })
   }
 

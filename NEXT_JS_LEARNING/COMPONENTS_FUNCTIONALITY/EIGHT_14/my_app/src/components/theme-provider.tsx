@@ -1,6 +1,14 @@
 // components/theme-provider.tsx
 "use client"
 
+
+
+// ThemeProvider component ka kaam hai:
+
+// Agar aapne "system" theme select kiya hai, toh yeh aapke user ke system ke theme preferences ko follow karega.
+// Agar user ka system dark mode mein hai, toh aapka application bhi dark mode mein chalega.
+// Agar user ka system light mode mein hai, toh aapka application light mode mein chalega.
+
 import { createContext, useContext, useEffect, useState } from "react"
 
 type Theme = "dark" | "light" | "system"

@@ -205,6 +205,9 @@ export async function getProducts({
     filteredProducts = filteredProducts.filter((product) => product.price <= maxPrice)
   }
 
+  // Agar minPrice di gayi hai, to sirf woh products rakh raha hai jinka price >= minPrice ho.
+// Agar maxPrice di gayi hai, to sirf woh products rakh raha hai jinka price <= maxPrice ho.
+
   // Apply sorting
   if (sort) {
     switch (sort) {
@@ -228,12 +231,27 @@ export async function getProducts({
     }
   }
 
+
+// sort="price-asc" → Saste wale products sabse pehle dikhayega. asc yani accending order.
+// sort="price-desc" → Mehange wale products sabse pehle dikhayega. desc yani decending order.
+// sort="rating-desc" → Best rating wale products sabse pehle dikhayega.
+
   // Calculate pagination
   const itemsPerPage = 6
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage)
   const startIndex = (page - 1) * itemsPerPage
   const endIndex = startIndex + itemsPerPage
   const paginatedProducts = filteredProducts.slice(startIndex, endIndex)
+
+//   ✍ Example (Page = 2, Items per Page = 6):
+
+// Start Index: (2 - 1) * 6 = 6
+// End Index: 6 + 6 = 12
+// Products Show: filteredProducts.slice(6, 12) → Only products from index 6 to 11✍ Example (Page = 2, Items per Page = 6):
+
+// Start Index: (2 - 1) * 6 = 6
+// End Index: 6 + 6 = 12
+// Products Show: filteredProducts.slice(6, 12) → Only products from index 6 to 11
 
   return {
     products: paginatedProducts,
