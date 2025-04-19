@@ -1,0 +1,176 @@
+github microsoft ka he ak plateform
+ye hmy online vs code use krny ke  bhi deta he 
+aur yeh data he koi bhi online platform par upload kar sakte he
+ye hmy services dety hen ke hm apna code rkh skty hen or delete ho jay to wapas a jayga or 
+onlines kitna hoty hen work kitna krty hen code sbka report rakhta hejo ke hmary liye acha hota 
+he clien ke liye
+
+ye ak storage he jo ke microsoft ne kharid kr hmy srrvice krovide ki he 
+ye ak pori web he jha hm apny sary projects rakh dety hen hm apni harddrive sy githup ki drive
+me rakh dety hen osko doniya me kisi bhi jha sy acces kr skty hen 
+
+iska ye bhi faid he ke ak project or bhut sy log kam kr skty  hen or kam kr krky dalty rhty hen github pr dal dety or sb wha sy otha otha
+kr kam kr skty hen wrna sbkow8 krna hota ke ak ka kam hoto dosra osi pr kam kryga
+
+ye hmy host krny ki bhi service deta he yani deployes jesy versel pr krty hen 
+
+
+
+*************************************************
+
+git ****
+ye ak version controlling system he ye hmary laptop me install hota he 
+git ye ke jesy hm ak website bnary hen or osko bnny me hmy time lgyga bhut  time chiye to jesy 100 din 
+or hmara jo code he osmy hmny auto save krny ka option bhi band hogya kisi wja sy or 50 din bad hmara light chaly 
+jay ya koch ho jay jo computerbnad ho jay to 50 din ka code hmara zaya hogya isi liye hm githup pr kam krty hen or
+ osko jb kam krty hen to har roz git pr push kr dety hen agr code zaya bhi howa to ak din ka hoga 
+
+
+***********************************************
+
+
+
+
+CAMMANDS*************///////////////////***********
+
+git init ***
+ye initialized ho gya 
+isky bad file untrac ho jati he jb u bhi likha a jata he yani hmary computer me jo git he osky pas jati he osky bad git . add krny pr wo github pr jaygi or u bhi ht jata he yanu untrack nhi he ab track he
+
+
+comments****
+comments ko hm hmesha meaningfull rkhna he 
+git commit -m "this is my first commit"*****
+isliye hm apny code pr comments RAKHTY HEN KE HMNY KIS CHIZ KA code likha he  
+
+
+git status******
+ ye hmy koch info deta he ke hmara code kis ststus me he or kitnibar save hoga kb oga koch save he bhi ya nhi or isko track git krta he 
+ 
+
+
+git branch ********
+isy hmari brach ka name a jata he or jb hm cammand run krty hen (git brance -m main ) isy oska name githup pr main name  se badal deta he
+
+git remote add origin https://github.com/FAIZANAAZ/s.git*********
+ismy remot ka matlb ye internate or loacl yani hmara computer ismy hm btary hen ke ak location he joke internate pr he osko apny pas
+save krlo or phir (git push -u origin main) ki camamnd krky khty hen ke isko daldo os location  pr 
+push ki cammand me -u origin main ka matl  he ye chota nik name de diya taky bad me pora na likhna ory bs git push likh kr kam ho jay
+
+***********************************************
+
+COMMENT ********
+    YE WO COMMPENT ki bat hori he jo likha at ahe githup pr right corner pr hm jb os pr click krty hen to osmy wo sary commeents
+    open ho aty hen jo ke hmny kiya hoty hen push kty waqt or sath pski detail bhi hoti he ke kb kis wat kiya howa
+
+    or oski ak id bhi hoti he os id ka ak faida hota he ke hm os id ko copy krengy or terminal me run krengy phly =>git brach or osy hmy pta lg jayga ke kitni branch hen or konsi brach me hen hm phir => git checkout id=28nsnjhdeh83233mxjdee=>isy ye hoga ke jis waqt hmny ye comment kiya he os waqt tk ka code rhyga baqi agy ka  sara ht jayga yani hm pichy a agy apny code pr ak trha sy 
+
+    iska proceess is trha hota he ke github os id tk ka ak or branch bna kr hmy de deta he lekin wo temprary hota he yani sirf hmary  vs code me wo changes githup pr nhi hoti oska hmary orginal code sy talak nhi hota joky githup pr he
+
+    lekin hm os code ko githup pr bhi dal skty hen lekin wo bnyga new brach osi branch me add nhi hoga new branch bn jaygi 
+    joke nazr ayga githup pr jha likha hota he main ospr click krky  osky liye hmy yani pichy akr jo changing krni he wo krli phir osko 
+    hm githup pr dalengy 
+
+    run = git swich -c newbranch =>git add . =>git commit -m "dddfdf" =>git push --set-upstream origin newbranch => ye newbranch matlb wahi name jo swich krty waqt name diya tha 
+     ***** newbrance yani hmny ak name de diya name koch bhi ho skta he 
+    is trha wo github sy bhi change ho jayga 
+
+
+***********/////////////////////**************
+
+GIT BRANCHES************
+git branch***
+isy lish a jaygike kitni barnches hen or kis me abhi hm mojood hen
+jis brach me likha hoga * or color chnage hoga osi me hm mojood hongy 
+git branch *** 
+isy new branch bn jaygi
+
+git swich  anyname **
+anyname ki jga wo name likhengy jisky ander hmy jana he or os branch me enter ho jaengy
+
+git swich -c anyname ***
+isy branch bn bhi jaygi or os me enter bhi ho jaygy sath or osi branch me kam krny ke bad hm push esy krengy ye run krky
+git push --set-upstream origin newbranch => ye newbranch matlb wahi name jo swich yani create krty waqt name diya tha 
+
+git branch -M anyname ***
+isy jis branch me hen oska name chnage kr skty hen
+
+git brach -d anyname ***
+isy hm anyname ki jga jis branch ka name likhengy os branch ko delete kr dengy
+
+***********/////////////////////******************
+VIEWING COMMENTS ********
+
+run git log (short key shift +q)**
+isy jis brach me hongy osky sary comments nazr a jaygy id name sb kuchh
+
+run git log --oneline ***
+
+***********/////////////////////******************
+Merging Branches ********
+git checkout anyname => yani wo name jismy hm merj krna chaty hen dosri branch ko osky ander a gy hm
+run git merge anyname => yha wo name ayga jisko marge krna he main me 
+
+lekin wo conflic kr jayga kioky wo confuse ho jayga ke konsi brance ka phly rakho code konsa bad me to wo ak errro sa bna kr de dega
+code me koch extera chizen likh kr de dega hm phly on chizon ko htaygay >>> wagera or setting ko hath sy change krengy or nichy => click on resolve in merger editer => complete merge=> complete with conflict =>close with conflict =>phir sidebar sy jesy hm comment wagera krty hen push krny ke liye wo krdengy  
+phir hm jakr wahi main brach nikalengy githup pr or file me jakr dekhengy ke dodno code a gya ya nhi 
+
+***********/////////////////////******************
+
+git stash
+
+git stash ak solution he problem ka
+git stash ak temporary memory he jha hm data ko store krky rkhty hen
+
+problem ye he ke hm jb kam krty waqt terminal me ak brance me kam krty hen or dosri branch me jaty he to swich branch (os branch ka name jismy jana he) likhty hen lekin osy problem ye ati he ke jb hm again phly wali branch me jaty hen to osmy hmny jo bhi kam kiya tha wo sb mit jata he or git swich krty waqt wo ak error bhi deta he ke apka code mit jayga agr apny stash nhi kiya to agr phir bhi hm chahty hen hn mitny do to hm run krengy 
+git checkout -f (jis bach me jana chahty hen oska name)
+
+ak solution ye he ke hm new brnch me osko move krdy new brach bna kr or phir swich kren lekin osmy bhiye msla he ke hm jitni bar swich krengy or osko new branch bna kr rakhengy to kitni sari branches bn jaygi
+
+dosra solution ye he ke hm stash krty hen stash matlb hmny jo bhi kam kiya tha hm osko stash me rakh dety hen git stash me to 
+jb hm swich krengy to wo or again os branch me agay towo kam hat to jayga lekin hm enter krengy
+
+git stash applay
+towo sara kam a jayga jo stash me rakhya tha bhly jitni bar swich kra or git bash me rkha ho wo sara kam a jayga 
+
+
+git stash list 
+isy wo sari stash a jaygi jitni bar stash kiya tha 
+git stashn applay sy sary stash a jaty hen agr hm cahhty sirf ak ay to  hm run krrengy
+git stash applay stash@{0} => stash@{0} matlb wo sara stash jo sbse pehle stash kiya 0 number he 
+
+git stash drop stash@{0}
+ye 0 wala remove krdega 
+wesy hm git stash pop bhi kr skty hen lekin wo phir khta he phly save kro ye wo commit  or add krky phir kronga delete
+
+**************///////////////////////***************
+WORKING WITH GITHUP RPOSITORY*****
+
+
+FORKING REPO ********
+
+forking yani kisi or ki repo ko dirct apni repome lekr ana
+Githup pr jaengy  oski jiski repo copy krni he or wha forking ke button pr click krengy to wo khod ak new repo me le jayga hmary repo me or bolega name enter kro kiya name rkhna he  click on => create fork => lein wo hmary name sy nhi hogi wha likha hoga ke wo link ke kisi dosry ki repo sy oska name oper show hora hoga name hm ana de skty hen 
+
+lekin agr koi  changing ati he repo me to wo hmay pas nhi hogi to hm os repo ko apni repo sy open krengy ospr likha hoga => Sync fork too wo uptodate ho jayga
+
+agr koi hmari repo ko fork krta heto hmari repo me fork 0 1 likha ayga ke kitny logon ke fork kiya he 
+
+CONTRIBUTE TO OPE SOURCE   REPO*********
+CONTRIBUTE matlb repo ko edit krna he jo kisi dosry ki he osmy koch new chizen add ki he 
+
+hm phly oski repo ko open krengy osprm phly fork krengy => hmari jb repo me a jaygi osko open kreny=>oskophly edit krengy whi sy repo sy koch bhi jo contribute krna ho hmy wo =>click on commit changes koi bhi name dekr  => contribute click krengy =>open pull request =>osmy hm title dengy => or descriotion dengy lekin description achy sy hona chiye (chat gpt sy krwalen to acha he ) kioky ye jayga oski repo me wo ye prhyga dekhega ke kiya update kiya he agr osko sahi lga to wo combine krlega apny sath wrna nhi kryga => create pull request 
+
+agr hmary pas kisi ne contribute kiya he ******
+tm hm apni repo me jaengy dekheny =>pull request pr 1  ya 2 likha hoga jitny logon ne ki he request wo =>click on pull request=>clcik on merge agr sahi he to =>commit sms dengy or gr koch change krna he description me os bandy ki wo krengy => confirm wo change ho jayga or pull request km ho jaygi ak 
+
+*****************///////////***********
+private for few persons********
+
+private to hm bnaty waqt krdety hen private 
+lekin agr hm chahty hen ke koch logon ko ye dikhey baqi sbsy private rhy to hm os bandy ko collabrator bna dengy 
+go setting=>click collaborator => enter own passward =>click on add people sbsy nichy hoga =>again add people=> jisko add krna he osi repo pr janegy oski repo ka name copy krengy wo sujjection dega ke match kryga to hm click krengy => add collaborator =>toos bandy ko dikh jaygi wo repo baqi kisi ko nhi dikhygi 
+
+*****************///////////***********
+GITHUP DESKTOP
+hm os repo me jaengy jisko hm githup ke desktop me open krna he =>click on code=>click on code space => create a codespace on main =>yha hm file wagera sb kr skty hen or kam krky git add .  gotcommit wala sb chalaygy => wo ho jayga kam
