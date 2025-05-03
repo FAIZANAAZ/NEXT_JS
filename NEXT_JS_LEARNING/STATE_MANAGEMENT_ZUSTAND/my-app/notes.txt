@@ -1,7 +1,13 @@
+https://youtu.be/xcaumg7ONIg?si=zyzESZlN-UGF79oV
+
 State Management ki Zaroorat:
 Jab hum ek app bana rahe hote hain, toh aksar humein ek component se doosre component mein data share karna padta hai.
 
 Agar app chhota ho, toh hum props ke through data pass kar sakte hain, lekin jab app bara ho jata hai, toh yeh complex ho jata hai.
+yani AGR HMY component 1 me ak esa data use kry hen jo ke 5 component me use hora he to hm zustand ka use krty hen iska faida ye hota he k
+main component me jb changing aygi to 5 me a jayg changing har akko nhi krna pryga or dosra faida ye he ke hmy agr koi data 1 
+component sy 5 me pass krna he or hm agr propr ka use kry hen to hmy phy 2 me jana pryga phir 3 me or phir 4 or 5 me or zustand
+ke zariye hm 1 sy direct 5 me dal skty hen
 
 State Management ka use is liye zaroori hai, taake data consistency aur synchronization ho sake. Matlab ek jagah pe data change karte hi woh automatically har component mein reflect ho jaye.
 
@@ -24,6 +30,8 @@ persist ek middleware hai jo aapke store ko local storage ya session storage mei
 
 Yani agar aap app ko band karke dubara kholte hain, toh data waisa ka waisa milega, jo aapne pehle set kiya tha (jaise count value).
 
+
+****************** 
 
 state management SETUP*********************
 npm install zustand (https://zustand.docs.pmnd.rs/getting-started/introduction)
