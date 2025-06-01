@@ -1,0 +1,27 @@
+(https://magicui.design/docs)
+Magic UI***************
+ye landing page or user interfae bnnay ke kam ata he 
+
+for installation*************
+npx shadcn@latest init
+npx shadcn@latest add "https://magicui.design/r/globe.json"
+esy hi hm add dal kr link ke zariye krengy add
+npx shadcn@latest add "https://magicui.design/r/marquee"
+marquee ye change hota rhyga bs 
+
+
+use case***********
+
+1.open https://magicui.design/docs/components 
+2.Select any component
+3.Click on useage 
+4.copy the code and past in your project where you want to use that component
+5.or phir os component ko modify khod krna hoga jesa hm chahty hen is trha
+   1.shadcn ki sorce sy hi ye he magicui to osi ki tha intaation me ak folder bn kr ayga component/magic/(hm jo add krengy wo)
+   2.to hm os file sy code ko othaygy or chat gpt ko dengy or agr wo perameter me leta hoga koch to bhi chat </animate hi={sss}>
+    esy krky add krdyga ya agr kisi tags ke zariye leta hoga wo bhi usage me likha hoga to osmy krdega chat ko file ka or useage dono
+    ka code dengy phir wo koch na koch bna kr dega osi trha ka jo hmny othaya he phir osko apny hisab sy modify krengy osmy jo lgana ho sb phir osko wha chaladengy jha use krna ho yani total 3 fies bnygi takriban 
+
+animation************ 
+agr koi esa component  he jismy animation hori or code dalny ke bad wo run na ho animation bs layout ay to 
+ osky code ke nichy ak cli hoga intallation ka usky braber me hoga ak manual ka tab ospr click krengy or os code ko hm globle css me rakh dengy to ho jaygi or jismy code na ho wo wesy hi chlyga phir 

@@ -1,0 +1,8 @@
+1.all project file contert into zip file without (src,nodemodule , .next ) file
+src ke ander ka data copy krky bahir rakhdengy main me kioky vercel sr ki file nhi leta 
+
+2.go vo by vercel=>click on upload project=>click on open broswer => slect zip file 
+
+**************************************
+osi me oper githup bhi likha ata he hm chahy to wha pr click krky osko dal skty hen githup pr phir osko hm vs code me pull kr skty hen isy ye hoga hm changing vercel pr kregy
+or dal dengy github pr or wha sy pull kr lena copy past ya update bar bar nhi krna pryga

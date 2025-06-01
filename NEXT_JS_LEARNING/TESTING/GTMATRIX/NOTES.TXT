@@ -1,0 +1,37 @@
+1. SEARCH (https://gtmetrix.com/reports/admin-dashboard-eta-neon.vercel.app/XfXsCw3v/)
+
+2. enter url of deployment link in gtmetrix.com
+
+
+FEATURES*****************
+
+1. Performance:
+100% performance ka matlab hai ki aapki website ka overall performance score perfect hai
+
+2.Structure:
+STRUCTURE ka matlab hai ki website ke structure kaafi KESA hai, YANI website ka layout perfect hai ya nhi kis trha components ko alag alg 
+krky bnaya he sb koch ya ak sath koch bhi Structure mein website ke code aur layout ki baat hoti hai
+
+3. Web Vitals:
+Yeh metrics aapki website ki user experience ko measure karte hain. Web Vitals ko Google ne define kiya hai aur yeh help karta hai websites ko optimize karne mein.
+
+LCP (Largest Contentful Paint):
+
+lcp ka matlab hai ki aapki website ka largest content (jaise image, video, ya text block) kitny time  milliseconds 
+mein load ho rha hai. LCP ka target hona chahiye 2.5 seconds ya usse kam.Iska matlab hai ki website ka main
+content bahut fast load ho raha hai, jo acchi baat hai. agr 2.5 ya osy km he to 
+
+TBT (Total Blocking Time):
+
+0ms ka matlab hai ki website pe koi blocking time nahi hai. Blocking time ka matlab hota hai ki jab browser koi
+action perform karta hai aur usse kisi kaam mein rukawat (block) hoti hai. 0ms ka matlab hai ki aapki website smooth 
+hai aur koi blockage nahi hai.
+
+
+CLS (Cumulative Layout Shift) Score:
+0 ka matlab hai ki aapki website ka layout bilkul stable hai. Yaani jab aap page load karte hain, 
+toh content (text image apni jha sy hil nhi rha) move nahi ho rha . Har element apne fixed place par rehta hai 
+aur website load hone ke baad koi unexpected shift nahi hota.
+
+Achha CLS Score (0): Yeh ensure karta hai ki user ko ek smooth experience mil raha hai. Agar content
+ shift hota hai, toh user ko irritate ho sakta hai, kyunki wo sochta hai ki webpage properly load nahi ho raha hai.

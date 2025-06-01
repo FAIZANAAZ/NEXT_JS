@@ -1,4 +1,4 @@
-/* (1)open (https://clerk.com/) => (2)click on dashboard 
+/* (1)open (https://clerk.com/) => (2)click on signin 
 (2)continue with google
 (3)wo dashboard pr le jayga hm user pr click krengy
 
@@ -42,7 +42,7 @@ export const config = {
 
 (13)web ko thora or nichy krengy or update your envornment variable wha sy copy krengy (NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in) or past krengy env.local me
 
-(14)phir whi jo hmny dashbrd pr user ka tab open kiya howa tha ospr jaengy or overview ka tab open krengy 
+(14)phir whi jo hmny dashbrd pr user ka tab open kiya howa tha ospr jaengy or configur=> ka tab open krengy 
 
 (15)wha bhi env.local me sy keys hongi osko copy krengy or past krengy env.local me (NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="yha key past krni he")
 

@@ -1,3 +1,28 @@
+Google Lighthouse ko Google khud recommend karta hai, aur yeh tool 
+web performance, SEO, aur accessibility ki testing ke liye kaafi popular hai.
+Companies prefer karti hain kyunki yeh tool aapko detailed aur actionable feedback deta hai.
+
+Google Lighthouse Features:*************
+Performance: Page load time, interactivity, aur visual stability ko test karta hai.
+
+Accessibility: Aapki website ko kaise accessible bana sakte hain, yeh check karta hai.
+
+SEO: Aapki website ko search engines ke liye kitna optimize kiya gaya hai, yeh check karta hai.
+
+Best Practices: Yeh aapko security aur other best practices ke liye suggestions deta hai.
+
+
+Use **************(first method)
+Google Chrome mein apni website open karein.
+
+Right-click karke Inspect ko select karein.
+
+Lighthouse tab ko select karein.
+
+Generate report pe click karein, aur aapko detailed performance report mil jayega.
+
+Use **************(second method)
+
 (1)lighthouse http://localhost:3000 --view
 (2)npm install -g lighthouse
 (3)npm fund
