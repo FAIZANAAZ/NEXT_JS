@@ -1,0 +1,44 @@
+Hero UI Kya Hai?
+Hero UI ek React component library hai jo Tailwind CSS ke sath bana hai. Yeh Tailwind ki utility classes ka istemal
+karti hai aur modern, responsive UI components provide karti hai jo tum Next.js projects mein easily integrate kar sakti ho.
+
+1.open hero.ui
+2.select any components which you want to use in your project
+3.intall nextjs 14 (npx create-next-app@14 )
+4.npm install @heroui/react
+
+5.make file in app/provider.tsx and past this code
+""use client";
+// providers.tsx
+import { HeroUIProvider } from '@heroui/react';
+
+export function Providers({ children }: { children: React.ReactNode }) {
+  return <HeroUIProvider>{children}</HeroUIProvider>;
+}
+"
+
+6.and wrap layout,tsx with providers
+"<Providers>{children}</Providers>"
+
+7.update ts config with this code
+"import { heroui } from "@heroui/react";
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+     "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [heroui()],
+};
+
+
+
+
+"

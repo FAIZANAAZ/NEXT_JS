@@ -1,6 +1,7 @@
 (https://magicui.design/docs)
 Magic UI***************
-ye landing page or user interfae bnnay ke kam ata he 
+Magic UI  ek React component library hai jo Tailwind CSS par based hai aur animations aur interactive UI
+ elements ko bahut asaani se banane mein madad karti hai.
 
 for installation*************
 npx shadcn@latest init
@@ -14,7 +15,7 @@ use case***********
 
 1.open https://magicui.design/docs/components 
 2.Select any component
-3.Click on useage 
+3.Click on code  
 4.copy the code and past in your project where you want to use that component
 5.or phir os component ko modify khod krna hoga jesa hm chahty hen is trha
    1.shadcn ki sorce sy hi ye he magicui to osi ki tha intaation me ak folder bn kr ayga component/magic/(hm jo add krengy wo)
@@ -25,3 +26,8 @@ use case***********
 animation************ 
 agr koi esa component  he jismy animation hori or code dalny ke bad wo run na ho animation bs layout ay to 
  osky code ke nichy ak cli hoga intallation ka usky braber me hoga ak manual ka tab ospr click krengy or os code ko hm globle css me rakh dengy to ho jaygi or jismy code na ho wo wesy hi chlyga phir 
+
+
+***********************************************
+agr hm sirf animation ko use krna chaty hen to phir hm oska usage ko normal otha skty hen or wo agr argument lega to pass krky khod ka 
+desing de skty hen 
