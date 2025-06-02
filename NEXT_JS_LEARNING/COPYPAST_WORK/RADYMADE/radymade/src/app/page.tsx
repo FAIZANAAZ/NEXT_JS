@@ -4,6 +4,8 @@ import Image from 'next/image';
 export default function Home() {
   return (
   <>
+
+  
 <section className="relative flex justify-center items-center">
   <Image 
     src={'/bgpic.jpg'} 
