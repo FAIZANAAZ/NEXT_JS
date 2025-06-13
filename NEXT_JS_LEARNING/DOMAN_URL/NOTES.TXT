@@ -1,0 +1,134 @@
+sbsy phly hmy kisi domain registrar (domain deny wali websites) se khareedna hoga,
+phir usse apni website hosting service (jaise Vercel ya Netlify) ke saath connect karna hoga.
+
+Domain deny wali websites :
+
+EXPENSIVE BUT BEST
+GoDaddy: https://www.godaddy.com
+Namecheap: https://www.namecheap.com
+Google Domains: https://domains.google
+
+Pakistan Mein Saste Aur Reliable Domain Registrars
+
+1. HosterPK********************
+.com domain: $8.5 per year (approximately PKR 2,399 for 2 years)
+
+.pk domain: PKR 2,399 for 2 years
+
+Free WHOIS privacy protection
+
+Free domain with hosting packages
+
+24/7 customer support
+
+
+
+2. HostCry (hostcry.com)************
+.com domain: PKR 3,499
+
+.pk domain: PKR 3,999
+
+Free WHOIS privacy protection
+
+Accepts EasyPaisa, bank transfer, PayPal, and credit card payments
+
+
+
+3. Domain.pk**************
+.pk domain: PKR 3,350 for 2 years
+
+.com domain: PKR 3,500
+
+Free DNS management and control panel
+
+Official Gold Channel Partner of PKNIC
+
+step for purchases domain
+
+🔹 Step 1******************::Domain khareedte waqt, hmy apne website ka naam choose karna hoga, jaise ke drass.com. agr
+ sirf pakistan ke liye he to .pk wrna .com lekin accessible sb pori doniya me hoga pk bhi bs wo pakistan ho higlight krti he
+
+🔹 Step 2******************:: 
+Domain Ko Vercel Ya Netlify Se Connect Karna
+
+🔹 Step 3******************:
+ Domain Ko Google Search Mein Dikhana
+
+🔹 Step 4******************: SSL Certificate (HTTPS) Lagana
+hmy website ko secure banane ke liye, SSL certificate lagana zaroori hai. Vercel aur Netlify dono free SSL certificates provide karte hain:
+
+Vercel: Automatic SSL setup hota hai jab hm custom domain add karte hain osmy ye krny ki zarort nhi he .
+
+🔹 Step 5******************:
+DNS Configuration Karna
+
+
+//////**************************************************************
+//////************************************************************** 
+//////************************************************************** 
+//////************************************************************** 
+
+USECASE  /////////////////////////////////
+
+PURCHASE DOMAIN**********
+Domain.pk
+1.Open Website: https://www.domain.pk
+2.Search Bar Mein Apna Desired Domain Name Enter Karein: Jaise "drass.com".
+3"Go" Par Click Karein: Agar domain available hoga pk me .com me ospr available ayga baqi pr unavailabe
+agr pk pr jesy unavailabe he or hmy phir bhi pk chiye to name thora change krlengy diffent jo availabe ho 
+4.pk slect kiya hto osi pr add pr click kregy =>click on checkout
+5.click on  Use custom nameservers =>update cart
+6. wo checkout ke page pr layga jha ak (Apply Promo Code)ka option hoga wo esy hi he osy fill krny sy hmy
+ dicount mil skta he wo wo code hmy chat gptbhi dhond kr de skta he wo oski official chanal wagera pr hoty hone
+7.Click on checkout
+8.detail enter krengy or payment method select karengy easypesa bhi he sb hen or order place krdengy 
+9.Payment complete hone ke baad, hmy ek confirmation email milni chahiye. Agar hmy email nahi milti, to apni spam folder bhi check karein.
+10.Domain activation mein kuch waqt lag sakta hai, lekin aam tor par yeh process kuch ghanton se lekar 24 ghanton tak complete ho jata hai.
+
+CONNECT WITH VERCEL ***********
+1. open https://vercel.com/faiza-naazs-projects
+2.Vercel mein login karne ke baad, apne project ko select karein jise aap domain se connect karna chahte hain.
+3.click on domain =>click on add domain =>jo name rkha tha web ka osko enter krengy =>Connect to an environment pr production rakhengy
+4.save krengy =>vercel dns dega jisko hm ko domain provider pr add krna hoga doman.com ki web pr
+5.vercel jb tk invelid configration dikhayga tb tk dns me update na krlen or osmy thora time lgta he phir domain Vercel project ke saath link ho jayega.
+
+Domain Management DNS (Domain Name System) ************
+after confirm email
+Agar aap Vercel ke liye DNS settings update karna chahte hain yani agr hm vercel ka use kry hen hosting  ke liye to dns seting krni prhti he
+
+1.Domain.pk par apne account mein login karein.
+2.Jab hm login ho jaayenge, to hmko ek dashboard dikhega. Usme hmy ak domain name ka option hoga.
+3.Uspe click kar ke aap domain settings ya management ka section dekh sakte hain.
+4.Apne domain ka naam select karein, aur wahan se aapko ek option milega DNS settings ya nameservers ka.
+5.usmy hmy vercel sy jb hm connect kry hongy to wo ak url dyga jo namesever khlata he wo koch is trha ka hoga ns1.vercel-dns.com osko hm add krky save krdengy
+
+
+Google Search Console Par Domain Verify Karne Ka Tareeqa:****************
+Google Search Console par domain verify karna zaroori hota hai, taake aap apne website ki visibility aur performance ko track kar sakein.
+Ye step aapke domain ko Google search engine ke liye verify karta hai, taake Google aapki website ko correctly index kar sake.
+
+1.open https://search.google.com/search-console/about 
+2.click on start now
+3.Domane waly tab me wahi url dalengy
+4.continue pr click krengy
+5.wo ak txt url (google-site-verification=8QSiWN3p55zhUbAvGbzcA46rc4-DuHSNoUp0_9jJtJ4) koch is trah dega tb tk hm verify later pr click krengy 
+jisko hmy doman.pk m jakr dns ki seting me add krna hoga thik wha jha vercel ko kiya tha osmy bhi thora waqt lg skta
+6.phir wapas aygy website pr google search wali or continue=> verify pr click krengy 
+
+or hm google saerch verify krny ki wja sy ospr jakr 
+
+Search Console Mein Apne Website Ki Performance Track Karna:
+
+Aap apni website ki search performance, impressions, clicks, aur indexing status dekh sakte hain.
+
+Sitemap Submit Karna:
+
+Apne website ka sitemap Google Search Console mein submit kar sakte hain, jisse Google ko aapki website ke pages ko correctly index karne mein madad milegi.
+
+SEO Insights:
+
+Search Console se aapko SEO insights milenge jo aapki website ko search results mein better position dene mein madadgar honge.
+
+
+********************************
+osky bad hmara url ready ho jayga 
