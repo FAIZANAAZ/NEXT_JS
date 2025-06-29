@@ -1,0 +1,25 @@
+sbsy phly stat managment ke liye flUx aya tha joke facebook ne bnaya tha phir react-redux aya osky bad redux-tolkit aya
+
+REDUX-TOLKIT****************
+Redux Toolkit is a set of tools for working with Redux, a popular state management library for React applications
+
+installation******
+open (https://redux-toolkit.js.org/)
+click on get start=>installation
+run in terminal (npm install @reduxjs/toolkit)
+also run (npm install react-redux)
+
+start*********
+make file (store.ts) anywhere but hm bnaygy src/constant/redux-tolkit/store.ts
+write code in store.ts me jakr dekhlo
+
+phir bnygy src/constant/redux-tolket/features/todoslice.ts ya todoslice ki jha jis kam ke liy km kry hen oski alag alg file bnygi
+
+////////////////////
+phir hmy jha bhi use krn he wo dta os component me hm disbatch yani jismy action perform hota he dta acess krty hen wo or useselecter jha sy data bhejty hen or laty hen wo osky zariye hm kam krengy 
+
+//////////////////
+phir hm page.tsx ko wrap krengy provider me lekin hm kioky rovider ko chiye hota he client component isi liye hm osy dosry componet me bna kr ossy again wrao krdengy main page.tsx me
+app/storeprovider
+//////////////////
+hm insect pr click kreky  => console ke agy (>>)pr clcik krky =>redux pr jakr iski prograss dekh skty hen scrolbar chala krke kitny actions ay or bhut koch
